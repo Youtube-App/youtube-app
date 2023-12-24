@@ -1,7 +1,7 @@
 import { TabBtnSecondary } from "./TabBtnSecondary";
 
 export default {
-  title: "Components/Button/TabBtnSecondary",
+  title: "Components/Button/TabBtn/TabBtnSecondary",
   component: TabBtnSecondary,
 }
 
