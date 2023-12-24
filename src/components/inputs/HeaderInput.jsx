@@ -18,12 +18,12 @@ export const HeaderInput = ({ state, placeholder }) => {
         </i>
       </button>
     </div>
-  )
-}
+  );
+};
 
 HeaderInput.propTypes = {
   state: PropTypes.bool,
-}
+};
 
 HeaderInput.defaultProps = {
   state: false,
