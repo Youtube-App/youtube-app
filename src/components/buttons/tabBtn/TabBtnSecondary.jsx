@@ -9,8 +9,10 @@ export const TabBtnSecondary = ({ state, label }) => {
 
 TabBtnSecondary.propTypes = {
   state: PropTypes.oneOf(['active', 'disabled', '']),
+  label: '버튼'
 }
 
 TabBtnSecondary.defaultProps = {
   state: '',
+  label: '버튼'
 };
