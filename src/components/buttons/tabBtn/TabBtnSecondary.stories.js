@@ -1,13 +1,13 @@
-import { TabBtnSecondary } from "./TabBtnSecondary";
+import { TabBtnSecondary } from './TabBtnSecondary';
 
 export default {
-  title: "Components/Button/TabBtn/TabBtnSecondary",
+  title: 'Components/Button/TabBtn/TabBtnSecondary',
   component: TabBtnSecondary,
-}
+};
 
 export const Secondary = {
   args: {
-    label: "secondary",
+    label: 'secondary',
     state: 'active',
-  }
-}
+  },
+};

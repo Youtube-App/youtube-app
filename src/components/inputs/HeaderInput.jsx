@@ -23,6 +23,7 @@ export const HeaderInput = ({ state, placeholder }) => {
 
 HeaderInput.propTypes = {
   state: PropTypes.bool,
+  placeholder: PropTypes.string,
 };
 
 HeaderInput.defaultProps = {
