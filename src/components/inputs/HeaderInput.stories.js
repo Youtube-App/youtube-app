@@ -1,11 +1,11 @@
-import { HeaderInput } from './HeaderInput';
+import { HeaderInput } from './HeaderInput.jsx';
 
 export default {
   title: 'Components/Input/HeaderInput',
   component: HeaderInput,
 };
 
-export const Primary = {
+export const Header = {
   args: {
     placeholder: '검색',
     state: '',
