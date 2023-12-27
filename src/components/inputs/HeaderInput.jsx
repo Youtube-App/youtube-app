@@ -4,7 +4,6 @@ import { GoSearch } from 'react-icons/go';
 import { TfiClose } from 'react-icons/tfi';
 
 export const HeaderInput = ({ state, placeholder }) => {
-  // const type = type;
   return (
     <div className={`header__input-wrapper${state && `--${state}`}`}>
       <div className="header__input-container">
@@ -16,7 +15,7 @@ export const HeaderInput = ({ state, placeholder }) => {
           <TfiClose />
         </i>
       </div>
-      <button className="header__input-btn" type="button">
+      <button className="header__submit-btn" type="button">
         <i className="header__input-btn-icon">
           <GoSearch />
         </i>
