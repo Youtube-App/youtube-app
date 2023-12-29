@@ -1,7 +1,7 @@
 import { TabBtnPrimary } from './TabBtnPrimary';
 
 export default {
-  title: 'Components/Button/TabBtn/TabBtnPrimary',
+  title: 'Components/Tabs/TabBtnPrimary',
   component: TabBtnPrimary,
 };
 
