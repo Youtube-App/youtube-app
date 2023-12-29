@@ -13,7 +13,7 @@ export const TabBtnPrimary = ({ state, label }) => {
 
 TabBtnPrimary.propTypes = {
   state: PropTypes.oneOf(['active', 'disabled', '']),
-  label: '버튼',
+  label: PropTypes.string,
 };
 
 TabBtnPrimary.defaultProps = {
