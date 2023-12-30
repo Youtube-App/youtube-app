@@ -6,7 +6,7 @@ export const BtnRoundSecondary = ({ hasIcon, icon, label }) => {
   return (
     <button className="btn__round-secondary">
       {hasIcon && <i className="btn__round-secondary-icon">{icon}</i>}
-      <span>{label}</span>
+      <span className="btn__round-secondary-label">{label}</span>
     </button>
   );
 };
