@@ -7,7 +7,7 @@ export default {
 
 export const Primary = {
   args: {
-    label: 'primary',
+    label: '전체',
     state: 'active',
   },
 };

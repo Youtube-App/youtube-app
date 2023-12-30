@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const TabBtnSecondary = ({ state, label }) => {
   return (
-    <button className={`tab__btn-secondary${state && `--${state}`}`}>
+    <button className={`tab__btn-secondary ${state && `tab__btn--${state}`}`}>
       {label}
     </button>
   );
@@ -16,5 +16,5 @@ TabBtnSecondary.propTypes = {
 
 TabBtnSecondary.defaultProps = {
   state: '',
-  label: '버튼',
+  label: '홈',
 };

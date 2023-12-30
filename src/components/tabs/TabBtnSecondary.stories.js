@@ -7,7 +7,7 @@ export default {
 
 export const Secondary = {
   args: {
-    label: 'secondary',
+    label: '홈',
     state: 'active',
   },
 };
