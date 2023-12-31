@@ -124,29 +124,66 @@
 }
 
 .comment {
-  &__input-container {
+  &__input-wrapper {
+    position: relative;
     border-bottom: 1px solid #000;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -1px;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: #000;
+      transition: all 0.25s;
+    }
+    &:has(.comment__input:focus) {
+      &::after {
+        width: 100%;
+      }
+    }
   }
   &__input {
     width: 100%;
     border: none;
+    font-size: 14px;
+    color: $text-primary;
   }
 }
 
 .name {
   &__input-wrapper {
+    position: relative;
     height: 32px;
-  }
-  &__input-container {
-    height: 34px;
+    border-bottom: 1px solid $text-primary-inverse;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -1px;
+      transform: translateX(-50%);
+      width: 0;
+      height: 3px;
+      background-color: $text-primary-inverse;
+      transition: all 0.25s;
+    }
+    &:has(.name__input:focus) {
+      &::after {
+        width: 100%;
+      }
+    }
   }
   &__input {
+    font-family: 'YouTube Sans';
     font-size: 24px;
+    font-weight: 700;
+    color: $text-primary-inverse;
   }
-  &__count-container {
-    height: 18px;
-    font-size: 12px;
-    line-height: 20px;
-    color: #fff;
-  }
+  // &__count-container {
+  //   height: 18px;
+  //   font-size: 12px;
+  //   line-height: 20px;
+  //   color: $text-primary-inverse;
+  // }
 }
