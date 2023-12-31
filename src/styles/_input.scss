@@ -37,6 +37,7 @@
     width: 100%;
     font-size: 16px;
     color: #111111;
+    font-family: 'Roboto';
     &::placeholder,
     &::-webkit-input-placeholder,
     &:-ms-input-placeholder {
@@ -146,9 +147,20 @@
   }
   &__input {
     width: 100%;
-    border: none;
+    height: 20px;
+    padding: 0 0 3px;
+    font-family: 'Roboto';
     font-size: 14px;
+    line-height: 20px;
     color: $text-primary;
+    border: none;
+    resize: none;
+    &::placeholder,
+    &::-webkit-input-placeholder,
+    &:-ms-input-placeholder {
+      font-size: 16px;
+      color: $secondary-title-color;
+    }
   }
 }
 
