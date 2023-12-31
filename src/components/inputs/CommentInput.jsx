@@ -6,7 +6,7 @@ export const CommentInput = ({ placeholder }) => {
     let textarea = document.querySelector('.comment__input');
 
     if (textarea) {
-      textarea.style.height = '20px';
+      textarea.style.height = '23px';
       let height = textarea.scrollHeight;
       textarea.style.height = `${height}px`;
     }
