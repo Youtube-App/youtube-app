@@ -132,3 +132,21 @@
     border: none;
   }
 }
+
+.name {
+  &__input-wrapper {
+    height: 32px;
+  }
+  &__input-container {
+    height: 34px;
+  }
+  &__input {
+    font-size: 24px;
+  }
+  &__count-container {
+    height: 18px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+  }
+}
