@@ -7,8 +7,8 @@ export default {
 
 export const Name = {
   args: {
-    countNum: 0,
-    maxNum: 150,
+    // countNum: 0,
+    // maxNum: 150,
     placeholder: '',
   },
 };
