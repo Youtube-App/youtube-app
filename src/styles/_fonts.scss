@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@mixin font-face($fontFamily, $name, $weight) {
+  @font-face {
+    font-family: $fontFamily;
+    // src: url(../fonts/#{$name}.eot);
+    src:
+      url(../fonts/#{$name}.eot?#iefix) format('embedded-opentype'),
+      url(../fonts/#{$name}.woff2) format('woff2'),
+      url(../fonts/#{$name}.woff) format('woff'),
+      url(../fonts/#{$name}.ttf) format('truetype');
+    font-weight: $weight;
+    font-style: normal;
+  }
+}
+@include font-face('Roboto', 'Roboto-Bold', 700);
+@include font-face('Roboto', 'Roboto-Medium', 500);
+@include font-face('Roboto', 'Roboto-Regular', 400);
+@include font-face('Noto Sans KR', 'NotoSansKR-Bold', 700);
+@include font-face('Noto Sans KR', 'NotoSansKR-Medium', 500);
+@include font-face('Noto Sans KR', 'NotoSansKR-Regular', 400);
