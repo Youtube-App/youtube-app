@@ -1,33 +1,39 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import cn from 'classnames';
 import { PiCameraPlus } from 'react-icons/pi';
 import { PiCameraPlusFill } from 'react-icons/pi';
 
-export const BtnCircleSecondary = ({ state, icon, activeIcon }) => {
-  // const [isActive] = useState(state);
-  const [states, setState] = useState(state);
+export const BtnCircleSecondary = ({ disabled, icon, activeIcon }) => {
+  const [isActive, setIsActive] = useState();
+
+  const onClick = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <button
-      onClick={() => setState(BtnCircleSecondary.propTypes.state)}
-      className={`btn__circle-secondary ${
-        state && `btn__circle-secondary--${states}`
-      }`}
+      onClick={onClick}
+      className={cn('btn__circle-secondary', {
+        'btn__circle-secondary--active': isActive,
+      })}
+      disabled={disabled}
     >
       <i className="btn__circle-secondary-icon">
-        {state === 'active' ? activeIcon : icon}
+        {isActive === true ? activeIcon : icon}
       </i>
     </button>
   );
 };
 
 BtnCircleSecondary.propTypes = {
-  state: PropTypes.oneOf(['active', 'disabled', '']),
+  disabled: PropTypes.bool,
   icon: PropTypes.element,
   activeIcon: PropTypes.element,
 };
 
 BtnCircleSecondary.defaultProps = {
-  state: '',
+  disabled: false,
   icon: <PiCameraPlus />,
   activeIcon: <PiCameraPlusFill />,
 };

@@ -9,7 +9,6 @@ export default {
 
 export const Primary = {
   args: {
-    state: '',
     icon: <PiCameraPlus />,
     activeIcon: <PiCameraPlusFill />,
   },
