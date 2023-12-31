@@ -69,7 +69,7 @@
     &:hover {
       &::before {
         display: block;
-        background: rgba(0, 0, 0, 0.1);
+        background: $bg-hover-primary;
       }
     }
     &:active {
@@ -92,7 +92,7 @@
     border: 1px solid #d3d3d3;
     &:hover {
       background-color: #f0f0f0;
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 0 $bg-hover-primary;
     }
     &:active {
       background-color: #e9e9e9;
