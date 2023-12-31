@@ -1,16 +1,34 @@
-import React from 'react';
+import { React, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { GoSearch } from 'react-icons/go';
+import { MdKeyboardAlt } from 'react-icons/md';
 import { TfiClose } from 'react-icons/tfi';
 
 export const HeaderInput = ({ state, placeholder }) => {
+  const headerInput = useRef(null);
+
+  function onMouseKeyboard() {
+    headerInput.current.focus();
+  }
+
   return (
     <div className={`header__input-wrapper${state && `--${state}`}`}>
       <div className="header__input-container">
         <i className="header__search-icon">
           <GoSearch />
         </i>
-        <input className="header__input" placeholder={placeholder} />
+        <input
+          className="header__input"
+          placeholder={placeholder}
+          ref={headerInput}
+        />
+        <button
+          className="header__keyboard-icon"
+          type="button"
+          onClick={onMouseKeyboard}
+        >
+          <MdKeyboardAlt />
+        </button>
         <i className="header__close-icon">
           <TfiClose />
         </i>

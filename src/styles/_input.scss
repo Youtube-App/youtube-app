@@ -45,6 +45,23 @@
       color: #888;
     }
   }
+  &__keyboard-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+    cursor: pointer;
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #666666;
+    }
+    &:hover {
+      svg {
+        fill: #333333;
+      }
+    }
+  }
   &__close-icon {
     position: relative;
     width: 20px;
