@@ -5,9 +5,8 @@ import { HiMiniMicrophone } from 'react-icons/hi2';
 export const BtnCirclePrimary = ({ disabled, icon }) => {
   return (
     <button
-      className={`btn__circle-primary ${
-        disabled && 'btn__circle-primary--disabled'
-      }`}
+      className={'btn__circle-primary'}
+      disabled={disabled}
     >
       <i className="btn__circle-primary-icon">{icon}</i>
     </button>

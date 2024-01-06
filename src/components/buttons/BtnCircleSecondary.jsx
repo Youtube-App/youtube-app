@@ -20,7 +20,7 @@ export const BtnCircleSecondary = ({ disabled, icon, activeIcon }) => {
       disabled={disabled}
     >
       <i className="btn__circle-secondary-icon">
-        {isActive === true ? activeIcon : icon}
+        {isActive ? activeIcon : icon}
       </i>
     </button>
   );

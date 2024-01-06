@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 
-export const TabBtnPrimary = ({ state, label }) => {
-  // const a = 'c';
-  // const type = type;
-  return (
-    <button
-      className={`tab__btn-primary ${state && `tab__btn-primary--${state}`}`}
-    >
-      {label}
-    </button>
-  );
+export const TabBtnPrimary = ({ label }) => {
+  const [isSelected, setIsSelected] = useState(0);
+
+  const onClick = (idx) => {
+    setIsSelected(idx);
+  };
+
+  return label.map((item, idx) => {
+    return (
+      <button
+        key={idx}
+        onClick={() => onClick(idx)}
+        className={cn('tab__btn-primary', {
+          'tab__btn-primary--active': idx === isSelected,
+        })}
+      >
+        {item}
+      </button>
+    );
+  });
 };
 
 TabBtnPrimary.propTypes = {
-  state: PropTypes.oneOf(['active', 'disabled', '']),
-  label: PropTypes.string,
+  label: PropTypes.array.isRequired,
 };
 
 TabBtnPrimary.defaultProps = {
-  state: '',
-  label: '전체',
+  label: ['홈', '동영상', '라이브'],
 };

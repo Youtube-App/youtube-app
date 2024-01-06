@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 
-export const TabBtnSecondary = ({ state, label }) => {
-  return (
-    <button
-      className={`tab__btn-secondary ${
-        state && `tab__btn-secondary--${state}`
-      }`}
-    >
-      {label}
-    </button>
-  );
+export const TabBtnSecondary = ({ label }) => {
+  const [isSelected, setIsSelected] = useState(0);
+
+  const onClick = (idx) => {
+    setIsSelected(idx);
+  };
+
+  return label.map((item, idx) => {
+    return (
+      <button
+        key={idx}
+        onClick={() => onClick(idx)}
+        className={cn('tab__btn-secondary', {
+          'tab__btn-secondary--active': idx === isSelected,
+        })}
+      >
+        {item}
+      </button>
+    );
+  });
 };
 
 TabBtnSecondary.propTypes = {
-  state: PropTypes.oneOf(['active', 'disabled', '']),
-  label: PropTypes.string,
+  label: PropTypes.array.isRequired,
 };
 
 TabBtnSecondary.defaultProps = {
-  state: '',
-  label: '홈',
+  label: ['전체', '음악', '동물'],
 };

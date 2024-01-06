@@ -7,7 +7,6 @@ export default {
 
 export const Secondary = {
   args: {
-    label: '홈',
-    state: 'active',
+    label: ['홈', '동영상', '라이브'],
   },
 };

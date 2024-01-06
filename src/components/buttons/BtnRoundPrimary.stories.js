@@ -8,6 +8,7 @@ export default {
 
 export const Primary = {
   args: {
+    forClick: false,
     hasIcon: true,
     icon: <PiShareFatLight />,
     label: '채널 공유',
