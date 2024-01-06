@@ -6,7 +6,11 @@ export const ProfileBtn = ({ profileImg }) => {
   return (
     <button className="profile__btn">
       <div className="profile__btn-img-wrapper">
-        <img className="profile__btn-img" src={profileImg} alt="" />
+        <img
+          className="profile__btn-img"
+          src={profileImg}
+          alt=""
+        />
       </div>
     </button>
   );
