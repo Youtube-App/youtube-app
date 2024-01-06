@@ -17,7 +17,7 @@ export const ProfileBtn = ({ profileImg }) => {
 };
 
 ProfileBtn.propTypes = {
-  profileImg: PropTypes.string,
+  profileImg: PropTypes.string.isRequired,
 };
 
 ProfileBtn.defaultProps = {
