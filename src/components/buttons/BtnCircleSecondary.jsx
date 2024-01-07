@@ -9,15 +9,16 @@ export const BtnCircleSecondary = ({
   icon,
   activeIcon,
   ariaLabel,
+  isToggle,
   // hasAlerts,
-  alertNum,
+  // alertNum,
 }) => {
   const [isActive, setIsActive] = useState(false);
   const [hasAlerts, setHasAlerts] = useState(true);
 
   const onClick = () => {
     setIsActive(!isActive);
-    if (hasAlerts) {
+    if (isActive && hasAlerts) {
       setHasAlerts(false);
     }
   };
@@ -32,19 +33,28 @@ export const BtnCircleSecondary = ({
       aria-label={ariaLabel}
     >
       {
-        <i className="btn__circle-secondary-icon">
-          {activeIcon && isActive ? activeIcon : icon}
-        </i>
+        isToggle ? (
+          <i className="btn__circle-secondary-icon">
+            {isActive ? activeIcon : icon}
+          </i>
+        ) : (
+          <i className="btn__circle-secondary-icon">{icon}</i>
+        )
+
+        // <i className="btn__circle-secondary-icon">
+        //   {isToggle && isActive ? activeIcon : icon}
+        // </i>
       }
-      {hasAlerts && (
+      {/* {hasAlerts && (
         <span className="btn__circle-secondary-alerts">{alertNum}</span>
-      )}
+      )} */}
     </button>
   );
 };
 
 BtnCircleSecondary.propTypes = {
   disabled: PropTypes.bool,
+  isToggle: PropTypes.bool,
   icon: PropTypes.element,
   activeIcon: PropTypes.element,
   ariaLabel: PropTypes.string.isRequired,
@@ -53,6 +63,7 @@ BtnCircleSecondary.propTypes = {
 
 BtnCircleSecondary.defaultProps = {
   disabled: false,
+  isToggle: false,
   icon: <PiCameraPlus />,
   activeIcon: <PiCameraPlusFill />,
   ariaLabel: '만들기',
