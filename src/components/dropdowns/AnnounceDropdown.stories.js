@@ -5,18 +5,22 @@ export default {
   component: AnnounceDropdown,
 };
 
-export const Announce = {
+export const DefaultAnnounce = {
   args: {
     size: 'xlarge',
     list: [
       {
-        type: 'menu',
-        name: '사용자',
-        nickname: 'user-hb7xh8ho3c',
-      },
-      {
-        type: 'bar',
+        announce: '다른 사용자가 다음 댓글에 좋아요 표시를 했습니다.',
+        comment: '내가 단 댓글의 내용',
+        time: '3주',
       },
     ],
+  },
+};
+
+export const NodataAnnounce = {
+  args: {
+    size: 'xlarge',
+    list: [],
   },
 };

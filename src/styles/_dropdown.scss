@@ -57,7 +57,7 @@
     }
     .dropdown__label {
       font-size: 14px;
-      color: #0f0f0f;
+      color: $text-primary;
     }
     .dropdown__fold-icon {
       position: absolute;
@@ -134,18 +134,83 @@
       svg {
         width: 120px;
         height: 120px;
-        fill: #909090;
+        fill: $tab-hover-secondary;
       }
     }
     .dropdown__no-data-message {
       font-size: 16px;
       font-weight: 500;
       margin-bottom: 8px;
-      color: #606060;
+      color: $secondary-title-color;
     }
     .dropdown__no-data-description {
       font-size: 14px;
-      color: #606060;
+      color: $secondary-title-color;
+    }
+  }
+  &__announce-section {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 16px 16px 16px 0;
+    cursor: pointer;
+    .dropdown__read-icon {
+      flex-shrink: 0;
+      width: 4px;
+      height: 4px;
+      margin: 22px 8px 0;
+      border-radius: 50%;
+      background: #295dcd;
+      &.read {
+        background: transparent;
+      }
+    }
+    .dropdown__youtube-icon {
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+      svg {
+        width: 48px;
+        height: 48px;
+        fill: #ea3323;
+      }
+    }
+    .dropdown__content {
+      .dropdown__message {
+        width: 242px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $text-primary;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        webkit-line-clamp: 6;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+      }
+      .dropdown__time {
+        font-size: 12px;
+        color: $secondary-title-color;
+      }
+    }
+    .dropdown__video-thumbnail {
+      width: 86px;
+      margin: 0 16px;
+    }
+    .dropdown__more-icon {
+      width: 20px;
+      height: 20px;
+      visibility: hidden;
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: #030303;
+      }
+    }
+    &:hover {
+      background: $bg-hover-secondary;
+      .dropdown__more-icon {
+        visibility: visible;
+      }
     }
   }
 }
