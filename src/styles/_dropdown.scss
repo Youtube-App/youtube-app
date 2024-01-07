@@ -73,6 +73,7 @@
       }
     }
     &.dropdown__profile-container {
+      align-items: flex-start;
       height: auto;
       padding: 8px 16px;
       cursor: initial;
@@ -80,7 +81,7 @@
         margin-left: 16px;
       }
       .dropdown__name {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 22px;
       }
       .dropdown__nickname {
@@ -148,16 +149,12 @@
     }
   }
 }
+
 .dropdown-bar {
   height: 1px;
   margin-top: 8px;
   background: rgba(0, 0, 0, 0.1);
 }
-
-.dropdown__container:not(
-    .dropdown__profile-container,
-    .dropdown__announce-container
-  ):nth-child(1),
 .dropdown-bar + .dropdown__container {
   margin-top: 8px;
 }
