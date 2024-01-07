@@ -19,6 +19,7 @@
     "react-scripts": "5.0.1",
     "sass": "^1.69.5",
     "storybook-addon-pseudo-states": "^2.1.2",
+    "storybook-addon-react-router-v6": "^2.0.10",
     "swiper": "^11.0.5",
     "web-vitals": "^2.1.4"
   },
