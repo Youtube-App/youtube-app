@@ -1,9 +1,9 @@
-import { ProfileBtn } from '../../components/buttons/ProfileBtn';
-import { VideoChannelName } from '../../components/common/VideoChannelName';
-import { UploadTime } from '../../components/common/UploadTime';
-import { VideoViews } from '../../components/common/VIdeoVIews';
-import { VideoThumbnail } from '../../components/common/VideoThumbnail';
-import { VideoTitle } from '../../components/common/VideoTitle';
+import { ProfileBtn } from '../../../components/buttons/ProfileBtn';
+import { VideoChannelName } from '../../../components/common/VideoChannelName';
+import { UploadTime } from '../../../components/common/UploadTime';
+import { VideoViews } from '../../../components/common/VIdeoVIews';
+import { VideoThumbnail } from '../../../components/common/VideoThumbnail';
+import { VideoTitle } from '../../../components/common/VideoTitle';
 
 export const VideoItem = () => {
   return (
