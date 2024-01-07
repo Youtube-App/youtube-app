@@ -1,4 +1,4 @@
-import { Dropdown } from './Dropdown.jsx';
+import { Dropdown } from './DefaultDropdown.jsx';
 import { LiaUserCircleSolid } from 'react-icons/lia';
 import { IoMoonOutline } from 'react-icons/io5';
 import { IoLanguageOutline } from 'react-icons/io5';
@@ -13,7 +13,7 @@ import { VscReport } from 'react-icons/vsc';
 // import { GoCircleSlash } from 'react-icons/go';
 
 export default {
-  title: 'Components/dropdowns/Dropdown',
+  title: 'Components/Dropdowns/DefaultDropdown',
   component: Dropdown,
 };
 

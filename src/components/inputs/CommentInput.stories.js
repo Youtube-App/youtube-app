@@ -1,7 +1,7 @@
 import { CommentInput } from './CommentInput.jsx';
 
 export default {
-  title: 'Components/Input/CommentInput',
+  title: 'Components/Inputs/CommentInput',
   component: CommentInput,
 };
 

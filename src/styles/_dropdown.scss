@@ -30,6 +30,14 @@
         padding: 0 16px;
       }
     }
+    &--xlarge {
+      width: 480px;
+      max-height: 642px;
+      padding: 0 0 20px;
+      .dropdown__container {
+        padding: 0 16px;
+      }
+    }
   }
   &__container {
     display: flex;
@@ -68,10 +76,6 @@
       height: auto;
       padding: 8px 16px;
       cursor: initial;
-      &:hover,
-      &:active {
-        background: transparent;
-      }
       .dropdown__label {
         margin-left: 16px;
       }
@@ -90,16 +94,58 @@
         color: #065fd4;
       }
     }
-    &:hover {
-      background: #f2f2f2;
+    &.dropdown__announce-container {
+      justify-content: space-between;
+      height: 49px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      cursor: initial;
+      .dropdown__label {
+        font-size: 16px;
+      }
     }
-    &:active {
-      background: rgba(0, 0, 0, 0.1);
+    &:not(
+        .dropdown__profile-container,
+        .dropdown__announce-container,
+        .dropdown__scroll-container
+      ) {
+      &:hover {
+        background: #f2f2f2;
+      }
+      &:active {
+        background: rgba(0, 0, 0, 0.1);
+      }
     }
   }
   &__scroll-container {
-    height: auto;
     overflow-y: auto;
+    cursor: initial;
+    .dropdown__no-data-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 574px;
+    }
+    .dropdown__bell-icon {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 24px;
+      svg {
+        width: 120px;
+        height: 120px;
+        fill: #909090;
+      }
+    }
+    .dropdown__no-data-message {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: #606060;
+    }
+    .dropdown__no-data-description {
+      font-size: 14px;
+      color: #606060;
+    }
   }
 }
 .dropdown-bar {
@@ -108,7 +154,10 @@
   background: rgba(0, 0, 0, 0.1);
 }
 
-.dropdown__container:not(.dropdown__profile-container):nth-child(1),
+.dropdown__container:not(
+    .dropdown__profile-container,
+    .dropdown__announce-container
+  ):nth-child(1),
 .dropdown-bar + .dropdown__container {
   margin-top: 8px;
 }

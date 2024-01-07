@@ -1,7 +1,7 @@
 import { NameInput } from './NameInput.jsx';
 
 export default {
-  title: 'Components/Input/NameInput',
+  title: 'Components/Inputs/NameInput',
   component: NameInput,
 };
 

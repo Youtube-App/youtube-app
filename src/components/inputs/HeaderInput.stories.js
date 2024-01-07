@@ -1,7 +1,7 @@
 import { HeaderInput } from './HeaderInput.jsx';
 
 export default {
-  title: 'Components/Input/HeaderInput',
+  title: 'Components/Inputs/HeaderInput',
   component: HeaderInput,
 };
 
