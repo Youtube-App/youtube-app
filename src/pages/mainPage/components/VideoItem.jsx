@@ -4,6 +4,7 @@ import { UploadTime } from '../../../components/common/UploadTime';
 import { VideoViews } from '../../../components/common/VIdeoVIews';
 import { VideoThumbnail } from '../../../components/common/VideoThumbnail';
 import { VideoTitle } from '../../../components/common/VideoTitle';
+import { Link } from 'react-router-dom';
 
 export const VideoItem = () => {
   return (
@@ -12,9 +13,9 @@ export const VideoItem = () => {
         <VideoThumbnail />
       </div>
       <div className="main__video-details">
-        <div className="profile-icon">
+        <Link className="profile-icon">
           <ProfileBtn />
-        </div>
+        </Link>
         <div className="main__video-desc">
           <VideoTitle />
           <VideoChannelName />

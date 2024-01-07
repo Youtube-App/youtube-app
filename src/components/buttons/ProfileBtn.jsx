@@ -4,7 +4,7 @@ import profileImg from '../../images/ex-img-profile.jpeg';
 
 export const ProfileBtn = ({ profileImg }) => {
   return (
-    <button className="profile__btn">
+    <div className="profile__btn">
       <div className="profile__btn-img-wrapper">
         <img
           className="profile__btn-img"
@@ -12,7 +12,7 @@ export const ProfileBtn = ({ profileImg }) => {
           alt=""
         />
       </div>
-    </button>
+    </div>
   );
 };
 
