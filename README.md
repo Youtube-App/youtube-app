@@ -1,5 +1,6 @@
-# YOUTUBE APP
+# Youtube Web
 React로 제작한 Youtube 사이트
+
 
 
 ## Project 소개
@@ -8,13 +9,16 @@ React, Storybook을 활용하여 만든 Youtube 사이트에
 Youtube Data API로 데이터를 불러옵니다.
 
 
+
 ## 제작 기간
 23.12.24 ~
+
 
 
 ## 개발 환경
 ### 라이브러리
 - Lint : ESLint + Prettier
+
 
 
 ### 사용법
@@ -29,12 +33,14 @@ yarn run storybook
 ```
 
 
+
 ## 주요 기능
 1. 메인 페이지
 2. 로그인
 3. 동영상 재생 페이지
 4. 구독 페이지
 5. 보관함 페이지
+
 
 
 ## 문서 구조
