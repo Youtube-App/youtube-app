@@ -38,6 +38,7 @@ yarn run storybook
 
 
 ## 문서 구조
+```
 ├── .storybook
 ├── public
 ├── src
@@ -66,3 +67,4 @@ yarn run storybook
 ├── .prettierrc.js  // prettier 설정
 ├── jsconfig.json
 └── yarn.lock
+```
