@@ -16,6 +16,7 @@ import { VscReport } from 'react-icons/vsc';
 import { IoFlagOutline } from 'react-icons/io5';
 import { IoArrowUndoOutline } from 'react-icons/io5';
 import { GoCircleSlash } from 'react-icons/go';
+import { BtnCirclePrimary } from 'components/buttons/BtnCirclePrimary';
 
 export default {
   title: 'Components/Dropdowns/DefaultDropdown',
@@ -122,6 +123,7 @@ export const LargeLogin = {
         label: '의견 보내기',
       },
     ],
+    children: <BtnCirclePrimary />,
   },
 };
 
@@ -185,6 +187,7 @@ export const LargeLogout = {
         label: '의견 보내기',
       },
     ],
+    children: <BtnCirclePrimary />,
   },
 };
 
@@ -216,6 +219,7 @@ export const Medium = {
         label: '의견 보내기',
       },
     ],
+    children: <BtnCirclePrimary />,
   },
 };
 
@@ -234,5 +238,6 @@ export const Small = {
         label: '공유',
       },
     ],
+    children: <BtnCirclePrimary />,
   },
 };

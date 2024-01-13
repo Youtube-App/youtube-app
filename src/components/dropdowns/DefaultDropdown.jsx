@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { ProfileBtn } from '../buttons/ProfileBtn';
 import { LiaUserCircleSolid } from 'react-icons/lia';
@@ -11,15 +11,33 @@ import { IoSettingsOutline } from 'react-icons/io5';
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
 import { VscReport } from 'react-icons/vsc';
 import { SlArrowRight } from 'react-icons/sl';
+import { BtnCirclePrimary } from 'components/buttons/BtnCirclePrimary';
 
-export const Dropdown = ({ size, list }) => {
+export const Dropdown = ({ size, list, children }) => {
+  const dropdownRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(true);
+
   const profileItem = list.find((item) => item.type === 'profile');
   const listItem = list.filter((item) => item.type !== 'profile');
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      const isInside = dropdownRef?.current?.contains(e.target);
+      if (dropdownRef && !isInside) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   function renderList(item) {
     if (item.type === 'menu') {
       return (
-        <div className="dropdown__container">
+        <div className="dropdown__section">
           <i className="dropdown__menu-icon">{item.icon}</i>
           <div className="dropdown__label">{item.label}</div>
           {item.isFold && (
@@ -34,30 +52,51 @@ export const Dropdown = ({ size, list }) => {
       return <div className="dropdown-bar"></div>;
     }
   }
+
   return (
     <div
-      className={`dropdown__wrapper ${size && `dropdown__wrapper--${size}`}`}
+      className="dropdown__wrapper"
+      ref={dropdownRef}
     >
-      {profileItem && (
-        <div className="dropdown__container dropdown__profile-container">
-          <ProfileBtn />
-          <div className="dropdown__label">
-            <div className="dropdown__name">{profileItem.name}</div>
-            <div className="dropdown__nickname">@{profileItem.nickname}</div>
-            <a
-              className="dropdown__link"
-              href
-            >
-              Google 계정 관리
-            </a>
-          </div>
-        </div>
-      )}
-      {listItem && (
-        <div className="dropdown__scroll-container">
-          {listItem.map((item) => (
-            <React.Fragment key={item.label}>{renderList(item)}</React.Fragment>
-          ))}
+      <div
+        role="presentation"
+        className="dropdown__children"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {children}
+      </div>
+      {isOpen && (
+        <div
+          className={`dropdown__container ${
+            size && `dropdown__container--${size}`
+          }`}
+        >
+          {profileItem && (
+            <div className="dropdown__section dropdown__profile-section">
+              <ProfileBtn />
+              <div className="dropdown__label">
+                <div className="dropdown__name">{profileItem.name}</div>
+                <div className="dropdown__nickname">
+                  @{profileItem.nickname}
+                </div>
+                <a
+                  className="dropdown__link"
+                  href
+                >
+                  Google 계정 관리
+                </a>
+              </div>
+            </div>
+          )}
+          {listItem && (
+            <div className="dropdown__scroll-section">
+              {listItem.map((item) => (
+                <React.Fragment key={item.label}>
+                  {renderList(item)}
+                </React.Fragment>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -67,6 +106,7 @@ export const Dropdown = ({ size, list }) => {
 Dropdown.propTypes = {
   size: PropTypes.oneOf(['large', 'medium', 'small']).isRequired,
   list: PropTypes.array,
+  children: PropTypes.any,
 };
 
 Dropdown.defaultProps = {
@@ -138,4 +178,5 @@ Dropdown.defaultProps = {
       label: '의견 보내기',
     },
   ],
+  children: <BtnCirclePrimary />,
 };

@@ -1,5 +1,15 @@
 .dropdown {
   &__wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  &__children {
+    display: inline-block;
+  }
+  &__container {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
     display: inline-block;
     padding: 8px 0;
     border-radius: 12px;
@@ -8,14 +18,14 @@
     backdrop-filter: blur(8px);
     &--small {
       width: 116px;
-      .dropdown__container {
+      .dropdown__section {
         height: 36px;
         padding: 0 12px;
       }
     }
     &--medium {
       width: 223px;
-      .dropdown__container {
+      .dropdown__section {
         height: 36px;
         padding: 0 12px;
       }
@@ -25,7 +35,7 @@
     }
     &--large {
       width: 300px;
-      .dropdown__container {
+      .dropdown__section {
         height: 40px;
         padding: 0 16px;
       }
@@ -34,12 +44,12 @@
       width: 480px;
       max-height: 642px;
       padding: 0 0 20px;
-      .dropdown__container {
+      .dropdown__section {
         padding: 0 16px;
       }
     }
   }
-  &__container {
+  &__section {
     display: flex;
     align-items: center;
     position: relative;
@@ -72,7 +82,7 @@
         fill: #030303;
       }
     }
-    &.dropdown__profile-container {
+    &.dropdown__profile-section {
       align-items: flex-start;
       height: auto;
       padding: 8px 16px;
@@ -95,7 +105,7 @@
         color: #065fd4;
       }
     }
-    &.dropdown__announce-container {
+    &.dropdown__announce-section {
       justify-content: space-between;
       height: 49px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -105,9 +115,9 @@
       }
     }
     &:not(
-        .dropdown__profile-container,
-        .dropdown__announce-container,
-        .dropdown__scroll-container
+        .dropdown__profile-section,
+        .dropdown__announce-section,
+        .dropdown__scroll-section
       ) {
       &:hover {
         background: #f2f2f2;
@@ -117,10 +127,10 @@
       }
     }
   }
-  &__scroll-container {
+  &__scroll-section {
     overflow-y: auto;
     cursor: initial;
-    .dropdown__no-data-section {
+    .dropdown__no-data {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -148,7 +158,7 @@
       color: $secondary-title-color;
     }
   }
-  &__announce-section {
+  &__announce-area {
     display: flex;
     flex-wrap: nowrap;
     padding: 16px 16px 16px 0;
@@ -220,6 +230,6 @@
   margin-top: 8px;
   background: rgba(0, 0, 0, 0.1);
 }
-.dropdown-bar + .dropdown__container {
+.dropdown-bar + .dropdown__section {
   margin-top: 8px;
 }
