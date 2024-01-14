@@ -22,7 +22,6 @@ VideoChannelName.propTypes = {
 
 VideoChannelName.defaultProps = {
   videoChannelName: '태계일주 베이스캠프',
-  // channelId: 'e233',
   parameters: {
     reactRouter: {
       routerPath: '/channel2',

@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import profileImg from '../../images/ex-img-profile.jpeg';
 import { Link } from 'react-router-dom';
-// import { reactRouterParameters } from 'storybook-addon-react-router-v6';
-// import { reactRouterParameters } from 'storybook-addon-react-router-v6';
 
 export const ProfileBtn = ({ channelId, profileImg }) => {
   return (
@@ -24,22 +22,15 @@ export const ProfileBtn = ({ channelId, profileImg }) => {
 ProfileBtn.propTypes = {
   profileImg: PropTypes.string.isRequired,
   parameters: PropTypes.object,
-  channelId: PropTypes.string,
+  channelId: PropTypes.string.isRequired,
 };
 
 ProfileBtn.defaultProps = {
   profileImg,
-  channelId: '12',
   parameters: {
     reactRouter: {
       routerPath: '/channel',
       routerState: { channelId: 'dfdf' },
     },
   },
-  // parameters: {
-  //   reactRouter: {
-  //     routePath: '/channel/:channelId',
-  //     routeParams: { channelId: '123' },
-  //   },
-  // },
 };

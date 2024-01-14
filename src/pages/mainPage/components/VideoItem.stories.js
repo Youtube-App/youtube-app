@@ -5,6 +5,4 @@ export default {
   component: VideoItem,
 };
 
-export const Default = {
-  args: {},
-};
+export const Default = {};

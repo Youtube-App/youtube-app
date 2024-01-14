@@ -1,10 +1,8 @@
-// import { withRouter } from 'storybook-addon-react-router-v6';
 import { DefaultComment } from './DefaultComment.jsx';
 
 export default {
   title: 'Components/Comments/DefaultComment',
   component: DefaultComment,
-  // decorators: [withRouter],
 };
 
 export const Default = {
