@@ -98,6 +98,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -125,6 +126,20 @@
         stroke: none;
         fill: #333;
       }
+    }
+    &-alerts {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      background: $key-color;
+      border-radius: 50%;
+      border: 2px solid $text-primary-inverse;
+      color: $text-primary-inverse;
+      line-height: 18px;
+      font-size: 10px;
+      font-weight: 500;
     }
   }
 }

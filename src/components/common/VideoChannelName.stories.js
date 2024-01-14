@@ -1,14 +1,13 @@
-import { ProfileBtn } from './ProfileBtn';
-import profileImg from '../../images/ex-img-profile.jpeg';
+import { VideoChannelName } from './VideoChannelName';
 import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {
-  title: 'Components/Buttons/ProfileBtn',
-  component: ProfileBtn,
+  title: 'Components/Buttons/VideoChannelName',
+  component: VideoChannelName,
   decorators: [withRouter],
   parameters: {
     reactRouter: {
-      routePath: '/channel/:channelId',
+      routePath: '/channel2/:channelId',
       routeParams: { channelId: 'df23' },
     },
   },
@@ -16,12 +15,11 @@ export default {
 
 export const Primary = {
   args: {
-    profileImg,
     channelId: '123',
   },
   parameters: {
     reactRouter: {
-      routerPath: '/channel',
+      routerPath: '/channel2',
       routerState: { channelId: 'dfdf' },
     },
   },
