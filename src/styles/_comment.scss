@@ -35,6 +35,13 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+      &.creator {
+        line-height: 20px;
+        padding: 0 6px;
+        background: #888888;
+        color: #fff;
+        border-radius: 12px;
+      }
     }
 
     .comment__date {
@@ -70,19 +77,23 @@
   &__reaction {
     display: flex;
     align-items: center;
-
+    .comment__like-num {
+      margin-right: 8px;
+      font-size: 12px;
+      color: #606060;
+    }
     .comment__creator-like {
       position: relative;
-
       .comment__heart-icon {
         position: absolute;
         width: 12px;
         height: 12px;
-
+        left: 50%;
         svg {
           position: absolute;
           left: 50%;
           bottom: 50%;
+          transform: translate(-50%, -50%);
           width: 100%;
           height: 100%;
           fill: #ea3323;

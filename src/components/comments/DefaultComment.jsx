@@ -46,13 +46,16 @@ export const DefaultComment = ({ userName, date, comment, replyNum }) => {
               icon={<PiThumbsUpLight />}
               ariaLabel={'좋아요'}
             />
+            <span className="comment__like-num">6</span>
             <BtnCircleGhost
               icon={<PiThumbsDownLight />}
               ariaLabel={'싫어요'}
             />
             <div className="comment__creator-like">
               <ProfileBtn />
-              <IoIosHeart />
+              <div className="comment__heart-icon">
+                <IoIosHeart />
+              </div>
             </div>
             <BtnRoundSquareGhost
               icon={''}
@@ -80,6 +83,7 @@ DefaultComment.propTypes = {
   userName: PropTypes.string.isRequired,
   date: PropTypes.string,
   comment: PropTypes.string.isRequired,
+  likeNum: PropTypes.number,
   replyNum: PropTypes.number,
 };
 
@@ -87,5 +91,6 @@ DefaultComment.defaultProps = {
   userName: '구독자A',
   date: '10시간',
   comment: '잘 보고 갑니다.',
+  likeNum: 3,
   replyNum: 7,
 };
