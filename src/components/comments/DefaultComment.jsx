@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import { ProfileBtn } from 'components/buttons/ProfileBtn';
 import { BtnCircleGhost } from 'components/buttons/BtnCircleGhost';
 import { BtnRoundGhost } from 'components/buttons/BtnRoundGhost';
-import { BtnRoundGhostBlue } from 'components/buttons/BtnRoundGhostBlue';
-import { BtnCircleGhostBlue } from 'components/buttons/BtnCircleGhostBlue';
+// import { BtnRoundGhostBlue } from 'components/buttons/BtnRoundGhostBlue';
+// import { BtnCircleGhostBlue } from 'components/buttons/BtnCircleGhostBlue';
 // import { DefaultDropdown } from 'components/dropdowns/DefaultDropdown';
 import { PiThumbsUpLight } from 'react-icons/pi';
 import { PiThumbsDownLight } from 'react-icons/pi';
 import { IoIosHeart } from 'react-icons/io';
-import { IoMdArrowDropdown } from 'react-icons/io';
+// import { IoMdArrowDropdown } from 'react-icons/io';
 // import { IoMdMore } from 'react-icons/io';
 // import cn from 'classnames';
 
@@ -18,8 +18,8 @@ export const DefaultComment = ({
   userName,
   date,
   comment,
-  replyNum,
-  hasCreatorReply,
+  // replyNum,
+  // hasCreatorReply,
 }) => {
   // const replyDropdown = [
   //   {
