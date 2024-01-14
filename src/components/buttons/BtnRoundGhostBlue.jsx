@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IoMdArrowDropdown } from 'react-icons/io';
 
-export const BtnRoundGhostBlue = ({ hasIcon, icon, label }) => {
+export const BtnRoundGhostBlue = ({ icon, label }) => {
   return (
     <button className="btn__round-ghost-blue">
-      {hasIcon && <i className="btn__round-ghost-blue-icon">{icon}</i>}
+      {icon && <i className="btn__round-ghost-blue-icon">{icon}</i>}
       <span className="btn__round-ghost-blue-label">{label}</span>
     </button>
   );
@@ -18,7 +18,6 @@ BtnRoundGhostBlue.propTypes = {
 };
 
 BtnRoundGhostBlue.defaultProps = {
-  hasIcon: true,
   icon: <IoMdArrowDropdown />,
   label: '답글 7개',
 };

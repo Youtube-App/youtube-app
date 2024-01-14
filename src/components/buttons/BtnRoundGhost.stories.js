@@ -9,7 +9,6 @@ export default {
 export const RoundGhost = {
   args: {
     forClick: false,
-    hasIcon: true,
     icon: <PiShareFatLight />,
     label: '채널 공유',
   },

@@ -8,7 +8,6 @@ export default {
 
 export const RoundGhostBlue = {
   args: {
-    hasIcon: true,
     icon: <IoMdArrowDropdown />,
     label: '답글 7개',
   },

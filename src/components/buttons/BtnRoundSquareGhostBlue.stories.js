@@ -8,7 +8,6 @@ export default {
 
 export const RoundSquareGhost = {
   args: {
-    hasIcon: true,
     icon: <PiHouseThin />,
     label: '홈',
   },
