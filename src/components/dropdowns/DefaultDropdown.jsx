@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import PropTypes from 'prop-types';
+import { BtnCircleGray } from 'components/buttons/BtnCircleGray';
 import { ProfileBtn } from '../buttons/ProfileBtn';
+import PropTypes from 'prop-types';
 import { LiaUserCircleSolid } from 'react-icons/lia';
 import { IoMoonOutline } from 'react-icons/io5';
 import { IoLanguageOutline } from 'react-icons/io5';
@@ -11,7 +12,6 @@ import { IoSettingsOutline } from 'react-icons/io5';
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
 import { VscReport } from 'react-icons/vsc';
 import { SlArrowRight } from 'react-icons/sl';
-import { BtnCirclePrimary } from 'components/buttons/BtnCirclePrimary';
 
 export const Dropdown = ({ size, list, children }) => {
   const dropdownRef = useRef(null);
@@ -178,5 +178,5 @@ Dropdown.defaultProps = {
       label: '의견 보내기',
     },
   ],
-  children: <BtnCirclePrimary />,
+  children: <BtnCircleGray />,
 };

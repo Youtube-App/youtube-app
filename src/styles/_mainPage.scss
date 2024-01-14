@@ -29,7 +29,7 @@
           font-size: 16px;
           font-weight: 500;
           line-height: 22px;
-          color: $text-primary;
+          color: #0f0f0f;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           text-overflow: ellipsis;
@@ -43,7 +43,7 @@
           font-size: 14px;
           line-height: 20px;
           font-weight: 400;
-          color: $secondary-title-color;
+          color: #606060;
         }
       }
     }
@@ -54,7 +54,7 @@
       font-size: 14px;
       line-height: 20px;
       font-weight: 400;
-      color: $secondary-title-color;
+      color: #606060;
       -webkit-line-clamp: 2;
       text-overflow: ellipsis;
       white-space: normal;

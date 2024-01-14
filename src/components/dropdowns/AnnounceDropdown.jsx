@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import { BtnCirclePrimary } from 'components/buttons/BtnCirclePrimary';
-import { BtnCircleSecondary } from '../buttons/BtnCircleSecondary';
+import { BtnCircleGray } from 'components/buttons/BtnCircleGray';
+import { BtnCircleGhost } from '../buttons/BtnCircleGhost';
 import { IoSettingsOutline } from 'react-icons/io5';
 import { GoBell } from 'react-icons/go';
 import { IoLogoYoutube } from 'react-icons/io5';
@@ -46,7 +46,7 @@ export const AnnounceDropdown = ({ size, list, children }) => {
         >
           <div className="dropdown__section dropdown__announce-section">
             <div className="dropdown__label">알림</div>
-            <BtnCircleSecondary icon={<IoSettingsOutline />} />
+            <BtnCircleGhost icon={<IoSettingsOutline />} />
           </div>
           <div className="dropdown__scroll-section">
             {list.length > 0 && (
@@ -117,5 +117,5 @@ AnnounceDropdown.defaultProps = {
       nickname: 'user-hb7xh8ho3c',
     },
   ],
-  children: <BtnCirclePrimary />,
+  children: <BtnCircleGray />,
 };

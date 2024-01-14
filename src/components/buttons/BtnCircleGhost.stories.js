@@ -1,15 +1,15 @@
-import { BtnCircleSecondary } from './BtnCircleSecondary';
+import { BtnCircleGhost } from './BtnCircleGhost';
 import { PiCameraPlus } from 'react-icons/pi';
 import { PiCameraPlusFill } from 'react-icons/pi';
 import { BsBell } from 'react-icons/bs';
 import { BsBellFill } from 'react-icons/bs';
 
 export default {
-  title: 'Components/Buttons/BtnCircleSecondary',
-  component: BtnCircleSecondary,
+  title: 'Components/Buttons/BtnCircleGhost',
+  component: BtnCircleGhost,
 };
 
-export const Primary = {
+export const Ghost = {
   args: {
     icon: <PiCameraPlus />,
     activeIcon: <PiCameraPlusFill />,
@@ -25,7 +25,7 @@ export const Toggle = {
 
 export const Alert = {
   args: {
-    ...Primary.args,
+    ...Ghost.args,
     icon: <BsBell />,
     activeIcon: <BsBellFill />,
     isToggle: true,

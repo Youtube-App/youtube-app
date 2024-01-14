@@ -86,7 +86,7 @@
     &:hover {
       &::before {
         display: block;
-        background: $bg-hover-primary;
+        background: rgba(0, 0, 0, 0.1);
       }
     }
     &:active {
@@ -109,7 +109,7 @@
     border: 1px solid #d3d3d3;
     &:hover {
       background-color: #f0f0f0;
-      box-shadow: 0 1px 0 $bg-hover-primary;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
     }
     &:active {
       background-color: #e9e9e9;
@@ -169,14 +169,14 @@
     font-family: 'Roboto';
     font-size: 14px;
     line-height: 20px;
-    color: $text-primary;
+    color: #0f0f0f;
     border: none;
     resize: none;
     &::placeholder,
     &::-webkit-input-placeholder,
     &:-ms-input-placeholder {
       font-size: 16px;
-      color: $secondary-title-color;
+      color: #606060;
     }
   }
 }
@@ -185,7 +185,7 @@
   &__input-wrapper {
     position: relative;
     height: 32px;
-    border-bottom: 1px solid $text-primary-inverse;
+    border-bottom: 1px solid #fff;
     &::after {
       content: '';
       position: absolute;
@@ -194,7 +194,7 @@
       transform: translateX(-50%);
       width: 0;
       height: 3px;
-      background-color: $text-primary-inverse;
+      background-color: #fff;
       transition: all 0.25s;
     }
     &:has(.name__input:focus) {
@@ -207,12 +207,12 @@
     font-family: 'YouTube Sans';
     font-size: 24px;
     font-weight: 700;
-    color: $text-primary-inverse;
+    color: #fff;
   }
   // &__count-container {
   //   height: 18px;
   //   font-size: 12px;
   //   line-height: 20px;
-  //   color: $text-primary-inverse;
+  //   color: #fff;;
   // }
 }

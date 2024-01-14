@@ -1,12 +1,12 @@
-import { BtnRoundPrimary } from './BtnRoundPrimary.jsx';
+import { BtnRoundGhost } from './BtnRoundGhost.jsx';
 import { PiShareFatLight } from 'react-icons/pi';
 
 export default {
-  title: 'Components/Buttons/BtnRoundPrimary',
-  component: BtnRoundPrimary,
+  title: 'Components/Buttons/BtnRoundGhost',
+  component: BtnRoundGhost,
 };
 
-export const Primary = {
+export const RoundGhost = {
   args: {
     forClick: false,
     hasIcon: true,

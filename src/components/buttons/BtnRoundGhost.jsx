@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { PiShareFatLight } from 'react-icons/pi';
 import cn from 'classnames';
 
-export const BtnRoundPrimary = ({ forClick, hasIcon, icon, label }) => {
+export const BtnRoundGhost = ({ forClick, hasIcon, icon, label }) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const onClick = () => {
@@ -12,25 +12,25 @@ export const BtnRoundPrimary = ({ forClick, hasIcon, icon, label }) => {
   return (
     <button
       onClick={() => onClick()}
-      className={cn('btn__round-primary', {
-        'btn__round-primary--active': isSelected,
+      className={cn('btn__round-ghost', {
+        'btn__round-ghost--active': isSelected,
       })}
       type="button"
     >
-      {hasIcon && <i className="btn__round-primary-icon">{icon}</i>}
-      <span className="btn__round-primary-label">{label}</span>
+      {hasIcon && <i className="btn__round-ghost-icon">{icon}</i>}
+      <span className="btn__round-ghost-label">{label}</span>
     </button>
   );
 };
 
-BtnRoundPrimary.propTypes = {
+BtnRoundGhost.propTypes = {
   forClick: PropTypes.bool.isRequired,
   hasIcon: PropTypes.bool,
   icon: PropTypes.element,
   label: PropTypes.string,
 };
 
-BtnRoundPrimary.defaultProps = {
+BtnRoundGhost.defaultProps = {
   forClick: false,
   hasIcon: true,
   icon: <PiShareFatLight />,

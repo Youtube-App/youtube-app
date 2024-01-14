@@ -2,23 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { HiMiniMicrophone } from 'react-icons/hi2';
 
-export const BtnCirclePrimary = ({ disabled, icon }) => {
+export const BtnCircleGray = ({ disabled, icon }) => {
   return (
     <button
-      className={'btn__circle-primary'}
+      className={'btn__circle-gray'}
       disabled={disabled}
     >
-      <i className="btn__circle-primary-icon">{icon}</i>
+      <i className="btn__circle-gray-icon">{icon}</i>
     </button>
   );
 };
 
-BtnCirclePrimary.propTypes = {
+BtnCircleGray.propTypes = {
   disabled: PropTypes.bool,
   icon: PropTypes.element,
 };
 
-BtnCirclePrimary.defaultProps = {
+BtnCircleGray.defaultProps = {
   disabled: false,
   icon: <HiMiniMicrophone />,
 };

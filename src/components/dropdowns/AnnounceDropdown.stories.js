@@ -1,5 +1,5 @@
 import { AnnounceDropdown } from './AnnounceDropdown.jsx';
-import { BtnCirclePrimary } from 'components/buttons/BtnCirclePrimary';
+import { BtnCircleGray } from 'components/buttons/BtnCircleGray.jsx';
 
 export default {
   title: 'Components/Dropdowns/AnnounceDropdown',
@@ -16,7 +16,7 @@ export const DefaultAnnounce = {
         time: '3주',
       },
     ],
-    children: <BtnCirclePrimary />,
+    children: <BtnCircleGray />,
   },
 };
 
@@ -24,6 +24,6 @@ export const NodataAnnounce = {
   args: {
     size: 'xlarge',
     list: [],
-    children: <BtnCirclePrimary />,
+    children: <BtnCircleGray />,
   },
 };

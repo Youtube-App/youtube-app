@@ -13,7 +13,7 @@
     display: inline-block;
     padding: 8px 0;
     border-radius: 12px;
-    background: $text-primary-inverse;
+    background: #fff;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 32px 0px;
     backdrop-filter: blur(8px);
     &--small {
@@ -67,7 +67,7 @@
     }
     .dropdown__label {
       font-size: 14px;
-      color: $text-primary;
+      color: #0f0f0f;
     }
     .dropdown__fold-icon {
       position: absolute;
@@ -144,18 +144,18 @@
       svg {
         width: 120px;
         height: 120px;
-        fill: $tab-hover-secondary;
+        fill: #909090;
       }
     }
     .dropdown__no-data-message {
       font-size: 16px;
       font-weight: 500;
       margin-bottom: 8px;
-      color: $secondary-title-color;
+      color: #606060;
     }
     .dropdown__no-data-description {
       font-size: 14px;
-      color: $secondary-title-color;
+      color: #606060;
     }
   }
   &__announce-area {
@@ -190,7 +190,7 @@
         margin-bottom: 8px;
         font-size: 14px;
         line-height: 20px;
-        color: $text-primary;
+        color: #0f0f0f;
         text-overflow: ellipsis;
         overflow: hidden;
         webkit-line-clamp: 6;
@@ -199,7 +199,7 @@
       }
       .dropdown__time {
         font-size: 12px;
-        color: $secondary-title-color;
+        color: #606060;
       }
     }
     .dropdown__video-thumbnail {
@@ -217,7 +217,7 @@
       }
     }
     &:hover {
-      background: $bg-hover-secondary;
+      background: rgba(0, 0, 0, 0.05);
       .dropdown__more-icon {
         visibility: visible;
       }

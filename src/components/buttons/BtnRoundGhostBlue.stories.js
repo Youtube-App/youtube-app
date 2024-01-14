@@ -1,12 +1,12 @@
-import { BtnRoundTertiary } from './BtnRoundTertiary';
+import { BtnRoundGhostBlue } from './BtnRoundGhostBlue';
 import { IoMdArrowDropdown } from 'react-icons/io';
 
 export default {
-  title: 'Components/Buttons/BtnRoundTertiary',
-  component: BtnRoundTertiary,
+  title: 'Components/Buttons/BtnRoundGhostBlue',
+  component: BtnRoundGhostBlue,
 };
 
-export const Tertiary = {
+export const RoundGhostBlue = {
   args: {
     hasIcon: true,
     icon: <IoMdArrowDropdown />,

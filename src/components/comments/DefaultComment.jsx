@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import { useState } from 'react';
-// import cn from 'classnames';
-import { BtnCircleSecondary } from 'components/buttons/BtnCircleSecondary';
-// import { DefaultDropdown } from 'components/dropdowns/DefaultDropdown';
 import { ProfileBtn } from 'components/buttons/ProfileBtn';
+import { BtnCircleGhost } from 'components/buttons/BtnCircleGhost';
+import { BtnRoundSquareGhost } from 'components/buttons/BtnRoundSquareGhost';
+// import { DefaultDropdown } from 'components/dropdowns/DefaultDropdown';
 import { PiThumbsUpLight } from 'react-icons/pi';
 import { PiThumbsDownLight } from 'react-icons/pi';
 import { IoIosHeart } from 'react-icons/io';
 // import { IoMdMore } from 'react-icons/io';
 import { IoMdArrowDropdown } from 'react-icons/io';
+// import cn from 'classnames';
 
 export const DefaultComment = ({ userName, date, comment, replyNum }) => {
   // const replyDropdown = [
@@ -41,11 +42,11 @@ export const DefaultComment = ({ userName, date, comment, replyNum }) => {
             </button>
           </div>
           <div className="comment__reaction">
-            <BtnCircleSecondary
+            <BtnCircleGhost
               icon={<PiThumbsUpLight />}
               ariaLabel={'좋아요'}
             />
-            <BtnCircleSecondary
+            <BtnCircleGhost
               icon={<PiThumbsDownLight />}
               ariaLabel={'싫어요'}
             />
@@ -53,12 +54,12 @@ export const DefaultComment = ({ userName, date, comment, replyNum }) => {
               <ProfileBtn />
               <IoIosHeart />
             </div>
-            <BtnCircleSecondary
+            <BtnRoundSquareGhost
               icon={''}
-              ariaLabel={'답글'}
+              label={'답글'}
             >
               답글
-            </BtnCircleSecondary>
+            </BtnRoundSquareGhost>
           </div>
         </div>
         {/* <DefaultDropdown
