@@ -13,9 +13,7 @@ export const VideoItem = () => {
         <VideoThumbnail />
       </div>
       <div className="main__video-details">
-        <div className="profile-icon">
-          <ProfileBtn />
-        </div>
+        <ProfileBtn />
         <div className="main__video-desc">
           <VideoTitle />
           <VideoChannelName />

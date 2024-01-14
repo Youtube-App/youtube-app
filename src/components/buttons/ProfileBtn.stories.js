@@ -12,15 +12,23 @@ export default {
   },
 };
 
-export const Primary = {
+export const Button = {
   args: {
+    isBtn: true,
+    size: 's',
     profileImg,
-    channelId: '@vidChannelId',
   },
   parameters: {
     reactRouter: {
       routerPath: '/channel',
       routerState: { channelId: 'dfdf' },
     },
+  },
+};
+
+export const Chip = {
+  args: {
+    ...Button.args,
+    isBtn: false,
   },
 };

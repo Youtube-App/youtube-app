@@ -6,7 +6,7 @@ export const VideoChannelName = ({ channelId, videoChannelName }) => {
   return (
     <>
       <Link
-        to={channelId ? `/channel2/${channelId}` : '#'}
+        to={channelId ? `/channel/${channelId}` : '#'}
         className={'video__channel-name'}
       >
         {videoChannelName}
@@ -24,8 +24,8 @@ VideoChannelName.defaultProps = {
   videoChannelName: '태계일주 베이스캠프',
   parameters: {
     reactRouter: {
-      routerPath: '/channel2',
-      routerState: { channelId: 'dfdf' },
+      routePath: '/channel/:channelId',
+      routeParams: { channelId: 'df23' },
     },
   },
 };

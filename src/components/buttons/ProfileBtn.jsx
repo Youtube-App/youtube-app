@@ -3,34 +3,49 @@ import PropTypes from 'prop-types';
 import profileImg from '../../images/ex-img-profile.jpeg';
 import { Link } from 'react-router-dom';
 
-export const ProfileBtn = ({ channelId, profileImg }) => {
-  return (
-    <Link to={channelId ? `/channel/${channelId}` : '#'}>
-      <div className="profile__btn">
-        <div className="profile__btn-img-wrapper">
-          <img
-            className="profile__btn-img"
-            src={profileImg}
-            alt=""
-          />
-        </div>
+export const ProfileBtn = ({ isBtn, size, channelId, profileImg }) => {
+  return isBtn ? (
+    <Link
+      className={`profile__btn profile_btn--${size}`}
+      to={channelId ? `/channel/${channelId}` : '#'}
+    >
+      <div className="profile__btn-img-wrapper">
+        <img
+          className="profile__btn-img"
+          src={profileImg}
+          alt=""
+        />
       </div>
     </Link>
+  ) : (
+    <div className="profile__btn">
+      <div className="profile__btn-img-wrapper">
+        <img
+          className="profile__btn-img"
+          src={profileImg}
+          alt=""
+        />
+      </div>
+    </div>
   );
 };
 
 ProfileBtn.propTypes = {
+  isBtn: PropTypes.bool,
+  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'xlarge', 'xxl']),
   profileImg: PropTypes.string.isRequired,
   parameters: PropTypes.object,
   channelId: PropTypes.string.isRequired,
 };
 
 ProfileBtn.defaultProps = {
+  isBtn: true,
+  size: 'small',
   profileImg,
   parameters: {
     reactRouter: {
-      routerPath: '/channel',
-      routerState: { channelId: 'dfdf' },
+      routePath: '/channel/:channelId',
+      routeParams: { channelId: 'df23' },
     },
   },
 };

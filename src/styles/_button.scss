@@ -178,6 +178,8 @@
 }
 
 .profile__btn {
+  flex-shrink: 0;
+  display: block;
   width: 36px;
   height: 36px;
   border-radius: 50%;

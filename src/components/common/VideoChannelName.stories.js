@@ -5,20 +5,17 @@ export default {
   component: VideoChannelName,
   parameters: {
     reactRouter: {
-      routePath: '/channel2/:channelId',
+      routePath: '/channel/:channelId',
       routeParams: { channelId: 'df23' },
     },
   },
 };
 
 export const Primary = {
-  args: {
-    channelId: '@vidChannelName',
-  },
   parameters: {
     reactRouter: {
-      routerPath: '/channel2',
-      routerState: { channelId: 'dfdf' },
+      routePath: '/channel/:channelId',
+      routeParams: { channelId: '@channelId' },
     },
   },
 };
