@@ -3,16 +3,24 @@ import PropTypes from 'prop-types';
 // import { useState } from 'react';
 import { ProfileBtn } from 'components/buttons/ProfileBtn';
 import { BtnCircleGhost } from 'components/buttons/BtnCircleGhost';
-import { BtnRoundSquareGhost } from 'components/buttons/BtnRoundSquareGhost';
+import { BtnRoundGhost } from 'components/buttons/BtnRoundGhost';
+import { BtnRoundGhostBlue } from 'components/buttons/BtnRoundGhostBlue';
+import { BtnCircleGhostBlue } from 'components/buttons/BtnCircleGhostBlue';
 // import { DefaultDropdown } from 'components/dropdowns/DefaultDropdown';
 import { PiThumbsUpLight } from 'react-icons/pi';
 import { PiThumbsDownLight } from 'react-icons/pi';
 import { IoIosHeart } from 'react-icons/io';
-// import { IoMdMore } from 'react-icons/io';
 import { IoMdArrowDropdown } from 'react-icons/io';
+// import { IoMdMore } from 'react-icons/io';
 // import cn from 'classnames';
 
-export const DefaultComment = ({ userName, date, comment, replyNum }) => {
+export const DefaultComment = ({
+  userName,
+  date,
+  comment,
+  replyNum,
+  hasCreatorReply,
+}) => {
   // const replyDropdown = [
   //   {
   //     type: 'menu',
@@ -57,12 +65,10 @@ export const DefaultComment = ({ userName, date, comment, replyNum }) => {
                 <IoIosHeart />
               </div>
             </div>
-            <BtnRoundSquareGhost
-              icon={''}
+            <BtnRoundGhost
+              hasIcon={false}
               label={'답글'}
-            >
-              답글
-            </BtnRoundSquareGhost>
+            ></BtnRoundGhost>
           </div>
         </div>
         {/* <DefaultDropdown
@@ -71,9 +77,23 @@ export const DefaultComment = ({ userName, date, comment, replyNum }) => {
         list={replyDropdown}
       ></DefaultDropdown> */}
       </div>
-      <div className="reply-section">
-        <IoMdArrowDropdown />
-        답글 {replyNum}개
+      <div className="comment__reply-btn">
+        {/* {hasCreatorReply ? (
+          <>
+            <BtnCircleGhostBlue icon={<IoMdArrowDropdown />}>
+            <BtnRoundGhostBlue
+              icon={<IoMdArrowDropdown />}
+              label={`답글 ${replyNum}개`}
+            />
+          </>
+        ) : (
+          <>
+          <BtnRoundGhostBlue
+            icon={<IoMdArrowDropdown />}
+            label={`답글 ${replyNum}개`}
+          />
+          </>
+        )} */}
       </div>
     </div>
   );
@@ -85,6 +105,7 @@ DefaultComment.propTypes = {
   comment: PropTypes.string.isRequired,
   likeNum: PropTypes.number,
   replyNum: PropTypes.number,
+  hasCreatorReply: PropTypes.bool,
 };
 
 DefaultComment.defaultProps = {
@@ -93,4 +114,5 @@ DefaultComment.defaultProps = {
   comment: '잘 보고 갑니다.',
   likeNum: 3,
   replyNum: 7,
+  hasCreatorReply: true,
 };

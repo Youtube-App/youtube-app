@@ -84,6 +84,7 @@
     }
     .comment__creator-like {
       position: relative;
+      margin: 0 10px;
       .comment__heart-icon {
         position: absolute;
         width: 12px;
@@ -100,5 +101,12 @@
         }
       }
     }
+  }
+
+  &__reply-btn {
+    margin-left: 56px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 }
