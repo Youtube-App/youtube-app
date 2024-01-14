@@ -84,7 +84,7 @@
     }
     .comment__creator-like {
       position: relative;
-      margin: 0 10px;
+      margin: 0 8px 0 10px;
       .comment__heart-icon {
         position: absolute;
         width: 12px;
@@ -108,5 +108,21 @@
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+    .comment__reply-dot {
+      position: relative;
+      width: 3px;
+      margin: 0 4px;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: #0f0f0f;
+      }
+    }
   }
 }

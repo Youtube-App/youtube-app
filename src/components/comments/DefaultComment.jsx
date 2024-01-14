@@ -4,32 +4,37 @@ import PropTypes from 'prop-types';
 import { ProfileBtn } from 'components/buttons/ProfileBtn';
 import { BtnCircleGhost } from 'components/buttons/BtnCircleGhost';
 import { BtnRoundGhost } from 'components/buttons/BtnRoundGhost';
-// import { BtnRoundGhostBlue } from 'components/buttons/BtnRoundGhostBlue';
-// import { BtnCircleGhostBlue } from 'components/buttons/BtnCircleGhostBlue';
-// import { DefaultDropdown } from 'components/dropdowns/DefaultDropdown';
+import { BtnRoundGhostBlue } from 'components/buttons/BtnRoundGhostBlue';
+import { BtnCircleGhostBlue } from 'components/buttons/BtnCircleGhostBlue';
+import { DefaultDropdown } from 'components/dropdowns/DefaultDropdown';
 import { PiThumbsUpLight } from 'react-icons/pi';
 import { PiThumbsDownLight } from 'react-icons/pi';
 import { IoIosHeart } from 'react-icons/io';
-// import { IoMdArrowDropdown } from 'react-icons/io';
-// import { IoMdMore } from 'react-icons/io';
-// import cn from 'classnames';
+import { IoMdArrowDropdown } from 'react-icons/io';
+import { IoMdMore } from 'react-icons/io';
+import cn from 'classnames';
 
 export const DefaultComment = ({
+  mode,
   userName,
   date,
   comment,
-  // replyNum,
-  // hasCreatorReply,
+  replyNum,
+  hasCreatorReply,
 }) => {
-  // const replyDropdown = [
-  //   {
-  //     type: 'menu',
-  //     label: '신고',
-  //   },
-  // ];
+  const replyDropdown = [
+    {
+      type: 'menu',
+      label: '신고',
+    },
+    {
+      type: 'menu',
+      label: '신고2',
+    },
+  ];
 
   return (
-    <div className="comment__wrapper">
+    <div className={cn('comment__wrapper', { reply: mode === 'reply' })}>
       <div className="comment__highlight-chip">하이라이트 댓글</div>
       <div className="comment__container">
         <div className="comment__profile">
@@ -71,16 +76,19 @@ export const DefaultComment = ({
             ></BtnRoundGhost>
           </div>
         </div>
-        {/* <DefaultDropdown
-        size={'small'}
-        icon={<IoMdMore />}
-        list={replyDropdown}
-      ></DefaultDropdown> */}
+        <DefaultDropdown
+          size={'small'}
+          icon={<IoMdMore />}
+          list={replyDropdown}
+        >
+          <BtnCircleGhostBlue icon={<IoMdArrowDropdown />} />
+        </DefaultDropdown>
       </div>
       <div className="comment__reply-btn">
-        {/* {hasCreatorReply ? (
+        {hasCreatorReply ? (
           <>
-            <BtnCircleGhostBlue icon={<IoMdArrowDropdown />}>
+            <BtnCircleGhostBlue icon={<IoMdArrowDropdown />} />
+            <span className="comment__reply-dot"></span>
             <BtnRoundGhostBlue
               icon={<IoMdArrowDropdown />}
               label={`답글 ${replyNum}개`}
@@ -88,18 +96,19 @@ export const DefaultComment = ({
           </>
         ) : (
           <>
-          <BtnRoundGhostBlue
-            icon={<IoMdArrowDropdown />}
-            label={`답글 ${replyNum}개`}
-          />
+            <BtnRoundGhostBlue
+              icon={<IoMdArrowDropdown />}
+              label={`답글 ${replyNum}개`}
+            />
           </>
-        )} */}
+        )}
       </div>
     </div>
   );
 };
 
 DefaultComment.propTypes = {
+  mode: '',
   userName: PropTypes.string.isRequired,
   date: PropTypes.string,
   comment: PropTypes.string.isRequired,
@@ -109,6 +118,7 @@ DefaultComment.propTypes = {
 };
 
 DefaultComment.defaultProps = {
+  mode: '',
   userName: '구독자A',
   date: '10시간',
   comment: '잘 보고 갑니다.',
