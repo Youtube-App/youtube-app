@@ -29,7 +29,6 @@ export const Button = {
 export const Chip = {
   args: {
     ...Button.args,
-    size: 'small',
     isBtn: false,
   },
 };

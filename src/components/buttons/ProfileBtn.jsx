@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export const ProfileBtn = ({ isBtn, size, channelId, profileImg }) => {
   return isBtn ? (
     <Link
-      className={`profile__btn profile_btn--${size}`}
+      className={`profile__btn ${size && `profile__btn--${size}`}`}
       to={channelId ? `/channel/${channelId}` : '#'}
     >
       <div className="profile__btn-img-wrapper">
@@ -32,8 +32,14 @@ export const ProfileBtn = ({ isBtn, size, channelId, profileImg }) => {
 
 ProfileBtn.propTypes = {
   isBtn: PropTypes.bool,
-  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large', 'xlarge', 'xxl'])
-    .isRequired,
+  size: PropTypes.oneOf([
+    'xSmall',
+    'small',
+    'medium',
+    'large',
+    'xLarge',
+    'xxlarge',
+  ]),
   profileImg: PropTypes.string.isRequired,
   parameters: PropTypes.object,
   channelId: PropTypes.string,
