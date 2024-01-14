@@ -15,7 +15,7 @@ export default {
 export const Button = {
   args: {
     isBtn: true,
-    size: 's',
+    size: 'small',
     profileImg,
   },
   parameters: {
@@ -29,6 +29,7 @@ export const Button = {
 export const Chip = {
   args: {
     ...Button.args,
+    size: 'small',
     isBtn: false,
   },
 };

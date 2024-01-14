@@ -32,10 +32,11 @@ export const ProfileBtn = ({ isBtn, size, channelId, profileImg }) => {
 
 ProfileBtn.propTypes = {
   isBtn: PropTypes.bool,
-  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'xlarge', 'xxl']),
+  size: PropTypes.oneOf(['xSmall', 'small', 'medium', 'large', 'xlarge', 'xxl'])
+    .isRequired,
   profileImg: PropTypes.string.isRequired,
   parameters: PropTypes.object,
-  channelId: PropTypes.string.isRequired,
+  channelId: PropTypes.string,
 };
 
 ProfileBtn.defaultProps = {
