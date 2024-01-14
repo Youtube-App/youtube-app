@@ -13,9 +13,9 @@ import { AiOutlineQuestionCircle } from 'react-icons/ai';
 import { VscReport } from 'react-icons/vsc';
 import { SlArrowRight } from 'react-icons/sl';
 
-export const Dropdown = ({ size, list, children }) => {
+export const DefaultDropdown = ({ size, list, children }) => {
   const dropdownRef = useRef(null);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const profileItem = list.find((item) => item.type === 'profile');
   const listItem = list.filter((item) => item.type !== 'profile');
@@ -38,7 +38,7 @@ export const Dropdown = ({ size, list, children }) => {
     if (item.type === 'menu') {
       return (
         <div className="dropdown__section">
-          <i className="dropdown__menu-icon">{item.icon}</i>
+          {item.icon && <i className="dropdown__menu-icon">{item.icon}</i>}
           <div className="dropdown__label">{item.label}</div>
           {item.isFold && (
             <i className="dropdown__fold-icon">
@@ -103,13 +103,13 @@ export const Dropdown = ({ size, list, children }) => {
   );
 };
 
-Dropdown.propTypes = {
+DefaultDropdown.propTypes = {
   size: PropTypes.oneOf(['large', 'medium', 'small']).isRequired,
   list: PropTypes.array,
   children: PropTypes.any,
 };
 
-Dropdown.defaultProps = {
+DefaultDropdown.defaultProps = {
   size: 'large',
   list: [
     {

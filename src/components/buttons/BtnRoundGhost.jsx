@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { PiShareFatLight } from 'react-icons/pi';
 import cn from 'classnames';
 
 export const BtnRoundGhost = ({ forClick, icon, label }) => {
@@ -31,6 +30,6 @@ BtnRoundGhost.propTypes = {
 
 BtnRoundGhost.defaultProps = {
   forClick: false,
-  icon: <PiShareFatLight />,
+  icon: null,
   label: '채널 공유',
 };

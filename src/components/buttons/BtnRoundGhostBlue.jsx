@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IoMdArrowDropdown } from 'react-icons/io';
+// import { IoMdArrowDropdown } from 'react-icons/io';
 
 export const BtnRoundGhostBlue = ({ icon, label }) => {
   return (
@@ -12,12 +12,11 @@ export const BtnRoundGhostBlue = ({ icon, label }) => {
 };
 
 BtnRoundGhostBlue.propTypes = {
-  hasIcon: PropTypes.bool.isRequired,
   icon: PropTypes.element,
   label: PropTypes.string,
 };
 
 BtnRoundGhostBlue.defaultProps = {
-  icon: <IoMdArrowDropdown />,
+  icon: null,
   label: '답글 7개',
 };

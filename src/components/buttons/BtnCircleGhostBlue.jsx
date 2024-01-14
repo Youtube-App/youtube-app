@@ -4,8 +4,8 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 
 export const BtnCircleGhostBlue = ({ icon }) => {
   return (
-    <button className="btn__round-ghost-blue">
-      {icon && <i className="btn__round-ghost-blue-icon">{icon}</i>}
+    <button className="btn__circle-ghost-blue">
+      {icon && <i className="btn__circle-ghost-blue-icon">{icon}</i>}
     </button>
   );
 };
