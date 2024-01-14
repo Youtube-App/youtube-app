@@ -13,6 +13,7 @@ export const Ghost = {
   args: {
     icon: <PiCameraPlus />,
     activeIcon: <PiCameraPlusFill />,
+    hasAlerts: false,
   },
 };
 
@@ -20,6 +21,8 @@ export const Toggle = {
   args: {
     icon: <PiCameraPlus />,
     activeIcon: <PiCameraPlusFill />,
+    isToggle: true,
+    hasAlerts: false,
   },
 };
 
@@ -30,6 +33,7 @@ export const Alert = {
     activeIcon: <BsBellFill />,
     isToggle: true,
     ariaLabel: '알림',
+    hasAlerts: true,
     alertNum: 5,
   },
 };

@@ -10,16 +10,16 @@ export const BtnCircleGhost = ({
   activeIcon,
   ariaLabel,
   isToggle,
-  // hasAlerts,
-  // alertNum,
+  hasAlerts,
+  alertNum,
 }) => {
   const [isActive, setIsActive] = useState(false);
-  const [hasAlerts, setHasAlerts] = useState(true);
+  const [alerts, setAlerts] = useState(true);
 
   const onClick = () => {
     setIsActive(!isActive);
-    if (isActive && hasAlerts) {
-      setHasAlerts(false);
+    if (!isActive && hasAlerts) {
+      setAlerts(false);
     }
   };
 
@@ -45,9 +45,9 @@ export const BtnCircleGhost = ({
         //   {isToggle && isActive ? activeIcon : icon}
         // </i>
       }
-      {/* {hasAlerts && (
+      {hasAlerts && alerts && (
         <span className="btn__circle-ghost-alerts">{alertNum}</span>
-      )} */}
+      )}
     </button>
   );
 };
@@ -59,6 +59,7 @@ BtnCircleGhost.propTypes = {
   activeIcon: PropTypes.element,
   ariaLabel: PropTypes.string.isRequired,
   alertNum: PropTypes.number,
+  hasAlerts: PropTypes.bool,
 };
 
 BtnCircleGhost.defaultProps = {
@@ -67,5 +68,6 @@ BtnCircleGhost.defaultProps = {
   icon: <PiCameraPlus />,
   activeIcon: <PiCameraPlusFill />,
   ariaLabel: '만들기',
-  alertNum: 4,
+  hasAlerts: false,
+  // alertNum: 4,
 };
