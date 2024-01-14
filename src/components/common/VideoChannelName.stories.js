@@ -1,10 +1,10 @@
 import { VideoChannelName } from './VideoChannelName';
-import { withRouter } from 'storybook-addon-react-router-v6';
+// import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {
   title: 'Components/Buttons/VideoChannelName',
   component: VideoChannelName,
-  decorators: [withRouter],
+  // decorators: [withRouter],
   parameters: {
     reactRouter: {
       routePath: '/channel2/:channelId',

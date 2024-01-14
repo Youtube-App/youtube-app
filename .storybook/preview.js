@@ -17,7 +17,7 @@ const preview = {
     //   routePath: '/',
     // },
   },
-  // decorators: [withRouter],
+  decorators: [withRouter],
 };
 
 // export const decorators = [

@@ -1,11 +1,11 @@
 import { ProfileBtn } from './ProfileBtn';
 import profileImg from '../../images/ex-img-profile.jpeg';
-import { withRouter } from 'storybook-addon-react-router-v6';
+// import { withRouter } from 'storybook-addon-react-router-v6';
 
 export default {
   title: 'Components/Buttons/ProfileBtn',
   component: ProfileBtn,
-  decorators: [withRouter],
+  // decorators: [withRouter],
   parameters: {
     reactRouter: {
       routePath: '/channel/:channelId',

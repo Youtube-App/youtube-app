@@ -6,7 +6,7 @@ export const VideoChannelName = ({ channelId, videoChannelName }) => {
   return (
     <>
       <Link
-        to={channelId && `/channel2/${channelId}`}
+        to={channelId ? `/channel2/${channelId}` : '#'}
         className={'video__channel-name'}
       >
         {videoChannelName}
