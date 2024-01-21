@@ -14,5 +14,6 @@ VideoTitle.propTypes = {
 };
 
 VideoTitle.defaultProps = {
-  videoTitle: '2023 MBC 연예대상 시상식 비하인드 대방출',
+  videoTitle:
+    '[미리보기] 사람이 직접 돌리는 관람차라고?!?! 🏃🏻‍♂환상의 마다랜드🏃🏻‍♂ #태어난김에세계일주3 EP.7 게시자: 태계일주 베이스캠프 조회수 63,011회 1일 전 2분 59초',
 };
