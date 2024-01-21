@@ -1,4 +1,4 @@
-import { Dropdown } from './DefaultDropdown.jsx';
+import { DefaultDropdown } from './DefaultDropdown.jsx';
 import { BtnCircleGray } from 'components/buttons/BtnCircleGray.jsx';
 import { PiUserSquareLight } from 'react-icons/pi';
 import { GiNestedHexagons } from 'react-icons/gi';
@@ -20,7 +20,7 @@ import { GoCircleSlash } from 'react-icons/go';
 
 export default {
   title: 'Components/Dropdowns/DefaultDropdown',
-  component: Dropdown,
+  component: DefaultDropdown,
 };
 
 export const LargeLogin = {
