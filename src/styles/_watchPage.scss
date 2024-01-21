@@ -1,0 +1,49 @@
+// .video__title-wrapper
+.video__title-container {
+  font-family: Roboto;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #0f0f0f;
+}
+.video__summary-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  height: 54px;
+}
+.video__creator-section {
+}
+// .thumbs {
+//   g {
+//     path {
+//       stroke: #000;
+//       // fill: #000;
+//     }
+//   }
+// }
+.video__creator-info {
+  margin-left: 12px;
+}
+.creator__name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f0f0f;
+}
+.subscriber__number {
+  margin-right: 4px;
+  font-size: 12px;
+  color: #606060;
+}
+.video__reaction-section {
+  button + button {
+    margin-left: 8px;
+  }
+}
+
+// .video__introduce-container
+.video__introduce-container {
+  .video__view-section {
+    font-weight: 500;
+  }
+}
