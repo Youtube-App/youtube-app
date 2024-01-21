@@ -1,5 +1,3 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import { VideoChannelName } from 'components/common/VideoChannelName';
 import { UploadTime } from 'components/common/UploadTime';
 import { VideoViews } from 'components/common/VIdeoVIews';
@@ -8,36 +6,32 @@ import { VideoTitle } from 'components/common/VideoTitle';
 import { ProfileBtn } from 'components/buttons/ProfileBtn';
 import { SimpleBadge } from 'components/badge/SimpleBadge';
 import { VideoDuration } from 'components/common/VideoDuration';
+import { CommonDesc } from 'components/common/CommonDesc';
 
-export const VideoItem = ({ txt }) => {
+export const VideoItem = () => {
   return (
     <div className="search__video-container">
       <div className="search__video-thumbnail">
         <VideoThumbnail />
-        <VideoDuration />
+        <VideoDuration time={'5:20'} />
       </div>
       <div className="search__video-desc">
         <VideoTitle />
         <div className="search__video-count">
-          <VideoViews />
-          <UploadTime />
+          <VideoViews videoViews={'5.6만'} />
+          <UploadTime uploadTime={'4시간'} />
         </div>
         <div className="search__channel-info">
-          <ProfileBtn />
-          <VideoChannelName />
+          <ProfileBtn
+            isLink
+            to={'channelId'}
+          />
+          <VideoChannelName videoChannelName={'태계일주 베이스캠프'} />
         </div>
-        <div className="search__video-txt">{txt}</div>
+        <CommonDesc />
         <SimpleBadge label={'새 동영상'} />
       </div>
       {/* <div className="search__video-details"></div> */}
     </div>
   );
-};
-
-VideoItem.propTypes = {
-  txt: PropTypes.string,
-};
-
-VideoItem.defaultProps = {
-  txt: '누구보다 바게트에 진심이었던 빠니바게트를 위한 헌정 영상.',
 };
