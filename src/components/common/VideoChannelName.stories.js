@@ -12,6 +12,8 @@ export default {
 };
 
 export const Primary = {
+  isLink: true,
+  videoChannelName: '태계일주 베이스캠프',
   parameters: {
     reactRouter: {
       routePath: '/channel/:channelId',

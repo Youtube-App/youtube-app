@@ -18,7 +18,7 @@ export const VideoItem = () => {
         <ProfileBtn />
         <div className="main__video-desc">
           <VideoTitle />
-          <VideoChannelName />
+          <VideoChannelName isLink />
           <div className="main__video-count">
             <VideoViews />
             <UploadTime />
