@@ -1,31 +1,33 @@
 .btn__round {
   flex-wrap: nowrap;
-
-  &-gray {
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    height: 36px;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 36px;
+  border-radius: 18px;
+  .btn__icon {
+    margin-right: 6px;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .btn__label {
     font-size: 14px;
     line-height: 36px;
+    font-weight: 500;
+  }
+
+  &-gray {
     color: #0f0f0f;
     background: rgba(0, 0, 0, 0.05);
-    border-radius: 18px;
-    &-icon {
-      margin-right: 6px;
-      width: 24px;
-      height: 24px;
-      line-height: 0;
-      color: #0f0f0f;
-      svg {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &-label {
-      font-size: 14px;
-      line-height: 36px;
-      font-weight: 500;
+    .btn__icon,
+    .btn__label {
       color: #0f0f0f;
     }
     &:hover {
@@ -37,27 +39,8 @@
   }
 
   &-ghost {
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    height: 36px;
-    font-size: 14px;
-    line-height: 36px;
-    border-radius: 18px;
-    &-icon {
-      margin-right: 6px;
-      width: 24px;
-      height: 24px;
-      line-height: 0;
-      svg {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &-label {
-      font-size: 14px;
-      line-height: 36px;
-      font-weight: 500;
+    .btn__icon,
+    .btn__label {
       color: #0f0f0f;
     }
     &:hover {
@@ -69,26 +52,8 @@
   }
 
   &-ghost-blue {
-    display: flex;
-    align-items: center;
-    height: 36px;
-    line-height: 36px;
-    padding: 0 16px;
-    border-radius: 18px;
-    &-icon {
-      margin-right: 4px;
-      width: 18px;
-      height: 18px;
-      line-height: 0;
-      svg {
-        width: 100%;
-        height: 100%;
-        fill: #065fd4;
-      }
-    }
-    &-label {
-      font-size: 14px;
-      font-weight: 500;
+    .btn-icon,
+    .btn-label {
       color: #065fd4;
     }
     &:hover {
@@ -96,6 +61,29 @@
     }
     &:active {
       background: #cbd8e3;
+    }
+  }
+
+  &-blue {
+    background: #065fd4;
+    .btn__icon,
+    .btn__label {
+      color: #fff;
+    }
+    &:not(disabled) {
+      &:hover {
+        background: #2455b8;
+      }
+      &:active {
+        background: #88a3d9;
+      }
+    }
+    &:disabled {
+      background: #f2f2f2;
+      pointer-events: none;
+      .btn__label {
+        color: #909090;
+      }
     }
   }
 }

@@ -4,9 +4,9 @@ import { PiHouseThin } from 'react-icons/pi';
 
 export const BtnRoundSquareGhost = ({ icon, label }) => {
   return (
-    <button className="btn__round-square-ghost">
-      {icon && <i className="btn__round-square-ghost-icon">{icon}</i>}
-      <span className="btn__round-square-ghost-label">{label}</span>
+    <button className="btn__round btn__round-square-ghost">
+      {icon && <i className="btn__icon">{icon}</i>}
+      <span className="btn__label">{label}</span>
     </button>
   );
 };

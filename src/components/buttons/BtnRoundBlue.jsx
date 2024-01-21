@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-export const BtnRoundGhost = ({ forClick, icon, label }) => {
+export const BtnRoundBlue = ({ forClick, icon, label, disabled }) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const onClick = () => {
@@ -10,11 +10,12 @@ export const BtnRoundGhost = ({ forClick, icon, label }) => {
   };
   return (
     <button
-      onClick={() => onClick()}
-      className={cn('btn__round btn__round-ghost', {
-        'btn__round-ghost--active': isSelected,
-      })}
       type="button"
+      className={cn('btn__round btn__round-blue', {
+        'btn__round-blue--active': isSelected,
+      })}
+      disabled={disabled}
+      onClick={() => onClick()}
     >
       {icon && <i className="btn__icon">{icon}</i>}
       <span className="btn__label">{label}</span>
@@ -22,14 +23,16 @@ export const BtnRoundGhost = ({ forClick, icon, label }) => {
   );
 };
 
-BtnRoundGhost.propTypes = {
+BtnRoundBlue.propTypes = {
   forClick: PropTypes.bool.isRequired,
   icon: PropTypes.element,
   label: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
-BtnRoundGhost.defaultProps = {
+BtnRoundBlue.defaultProps = {
   forClick: false,
   icon: null,
   label: '채널 공유',
+  disabled: false,
 };

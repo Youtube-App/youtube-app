@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 export const BtnRoundGhostBlue = ({ icon, label }) => {
   return (
-    <button className="btn__round-ghost-blue">
-      {icon && <i className="btn__round-ghost-blue-icon">{icon}</i>}
-      <span className="btn__round-ghost-blue-label">{label}</span>
+    <button className="btn__round btn__round-ghost-blue">
+      {icon && <i className="btn__icon">{icon}</i>}
+      <span className="btn__label">{label}</span>
     </button>
   );
 };
