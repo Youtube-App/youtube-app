@@ -5,8 +5,10 @@ import { ProfileBtn } from 'components/buttons/ProfileBtn';
 import { BtnCircleGhost } from 'components/buttons/BtnCircleGhost';
 import { BtnRoundGhost } from 'components/buttons/BtnRoundGhost';
 import { BtnRoundGhostBlue } from 'components/buttons/BtnRoundGhostBlue';
+import { BtnRoundBlue } from 'components/buttons/BtnRoundBlue';
 import { BtnCircleGhostBlue } from 'components/buttons/BtnCircleGhostBlue';
 import { DefaultDropdown } from 'components/dropdowns/DefaultDropdown';
+import { CommentInput } from 'components/inputs/CommentInput';
 import { PiThumbsUpLight } from 'react-icons/pi';
 import { PiThumbsUpFill } from 'react-icons/pi';
 import { PiThumbsDownLight } from 'react-icons/pi';
@@ -16,16 +18,20 @@ import { IoMdArrowDropdown } from 'react-icons/io';
 import { IoMdArrowDropup } from 'react-icons/io';
 import { AiOutlineMore } from 'react-icons/ai';
 import { IoFlagOutline } from 'react-icons/io5';
+import { BsEmojiGrin } from 'react-icons/bs';
 
 export const DefaultComment = ({
   isOpen,
+  activeAnswer,
   userName,
   date,
   comment,
   replyNum,
   hasCreatorReply,
 }) => {
-  const [initialOpen, setIsOpen] = useState(isOpen);
+  const [initIsOpen, setIsOpen] = useState(isOpen);
+  const [, setActiveAnswer] = useState(activeAnswer);
+  const [answerValue, setAnswerValue] = useState(false);
 
   const replyDropdown = [
     {
@@ -77,6 +83,34 @@ export const DefaultComment = ({
               </div>
               <BtnRoundGhost label={'답글'}></BtnRoundGhost>
             </div>
+            {activeAnswer && (
+              <div className="comment__answer">
+                <div className="comment__profile">
+                  <ProfileBtn size={'small'} />
+                </div>
+                <div className="answer__input">
+                  <CommentInput
+                    placeholder="댓글 추가"
+                    onChange={() => {
+                      setAnswerValue(answerValue);
+                    }}
+                  />
+                  <div className="answer__btn-section">
+                    <BtnCircleGhost icon={<BsEmojiGrin />} />
+                    <div className="answer__btn-submit">
+                      <BtnRoundGhost label="취소"></BtnRoundGhost>
+                      <BtnRoundBlue
+                        label="답글"
+                        onClick={() => {
+                          setActiveAnswer(true);
+                        }}
+                        disabled={!answerValue}
+                      ></BtnRoundBlue>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
           <div className="comment__dropdown-section">
             <DefaultDropdown
@@ -90,12 +124,12 @@ export const DefaultComment = ({
         <div
           className="comment__reply-btn"
           role="presentation"
-          onClick={() => setIsOpen(!initialOpen)}
+          onClick={() => setIsOpen(!initIsOpen)}
         >
           {!hasCreatorReply ? (
             <>
               <BtnCircleGhostBlue
-                icon={initialOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
+                icon={initIsOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
               />
               <div className="comment__reply-badge">
                 <ProfileBtn size={'small'} />
@@ -106,7 +140,7 @@ export const DefaultComment = ({
           ) : (
             <>
               <BtnRoundGhostBlue
-                icon={initialOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
+                icon={initIsOpen ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
                 label={`답글 ${replyNum}개`}
               />
             </>
@@ -119,6 +153,7 @@ export const DefaultComment = ({
 
 DefaultComment.propTypes = {
   isOpen: PropTypes.boolean,
+  activeAnswer: PropTypes.boolean,
   userName: PropTypes.string.isRequired,
   date: PropTypes.string,
   comment: PropTypes.string.isRequired,
@@ -129,6 +164,7 @@ DefaultComment.propTypes = {
 
 DefaultComment.defaultProps = {
   isOpen: true,
+  activeAnswer: true,
   userName: '구독자A',
   date: '10시간',
   comment: '잘 보고 갑니다.',

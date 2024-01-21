@@ -1,6 +1,9 @@
 .comment {
   &__wrapper--reply {
     margin-left: 56px;
+    .comment__answer {
+      margin-left: 10px;
+    }
   }
 
   &__highlight-chip {
@@ -79,6 +82,9 @@
   &__more-btn {
     margin-top: 4px;
     color: #606060;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__reaction {
@@ -104,8 +110,28 @@
     }
   }
 
+  &__answer {
+    display: flex;
+    flex-wrap: nowrap;
+    .answer__input {
+      width: 100%;
+    }
+    .answer__btn-section {
+      display: flex;
+      justify-content: space-between;
+      .answer__btn-submit {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        button {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
   &__dropdown-section {
-    display: none;
+    visibility: hidden;
   }
 
   &__reply-btn {
@@ -134,7 +160,7 @@
 
   &__wrapper:hover {
     .comment__dropdown-section {
-      display: block;
+      visibility: visible;
     }
   }
 }

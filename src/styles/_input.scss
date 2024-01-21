@@ -1,10 +1,10 @@
 .header {
   &__input-wrapper {
     position: relative;
-    width: 100%;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+    width: 100%;
   }
   &__input-container {
     display: flex;
@@ -144,6 +144,8 @@
 .comment {
   &__input-wrapper {
     position: relative;
+    height: 23.5px;
+    margin-bottom: 8px;
     border-bottom: 1px solid #000;
     &::after {
       content: '';

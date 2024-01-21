@@ -8,6 +8,7 @@ export default {
 export const Default = {
   args: {
     isOpen: true,
+    activeAnswer: true,
     userName: '구독자A',
     date: '10시간',
     comment: '잘 보고 갑니다.',

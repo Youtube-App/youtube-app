@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const CommentInput = ({ placeholder }) => {
+export const CommentInput = ({ placeholder, onChange }) => {
   function resizeTextarea() {
     let textarea = document.querySelector('.comment__input');
 
@@ -17,20 +17,15 @@ export const CommentInput = ({ placeholder }) => {
         className="comment__input"
         placeholder={placeholder}
         onInput={resizeTextarea}
+        onChange={onChange}
       />
-      {/* <div className="comment__btn-wrapper">
-        <button className="comment__emoji-btn" type="button" />
-        <div className="comment__btn-section">
-          <button type="button">취소</button>
-          <button type="button">댓글</button>
-        </div>
-      </div> */}
     </div>
   );
 };
 
 CommentInput.propTypes = {
   placeholder: PropTypes.string.isRequired,
+  onChange: PropTypes.func,
 };
 
 CommentInput.defaultProps = {
