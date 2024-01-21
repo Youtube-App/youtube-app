@@ -1,4 +1,8 @@
 .comment {
+  &__wrapper--reply {
+    margin-left: 56px;
+  }
+
   &__highlight-chip {
     display: inline-flex;
     align-items: center;
@@ -17,7 +21,6 @@
   }
 
   &__profile {
-    width: 40px;
     margin-right: 16px;
   }
 
@@ -101,6 +104,10 @@
     }
   }
 
+  &__dropdown-section {
+    display: none;
+  }
+
   &__reply-btn {
     margin-left: 56px;
     display: flex;
@@ -122,6 +129,12 @@
         background: #0f0f0f;
         border-radius: 50%;
       }
+    }
+  }
+
+  &__wrapper:hover {
+    .comment__dropdown-section {
+      display: block;
     }
   }
 }
