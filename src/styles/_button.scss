@@ -270,3 +270,43 @@
     height: 136px;
   }
 }
+
+.subscription {
+  &__btn {
+    position: relative;
+    // display: flex;
+    padding: 0 16px;
+    height: 36px;
+    background: #0f0f0f;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 1s;
+    &-wrap {
+      transition: 1s;
+    }
+    &-text {
+      font-size: 14px;
+      line-height: 36px;
+      color: #fff;
+      font-weight: 500;
+      &-invisible {
+        position: absolute;
+        visibility: hidden;
+        & ~ .subscription__btn-lottie-wrap {
+          visibility: visible;
+          position: unset;
+        }
+      }
+    }
+    &-lottie {
+      width: 24px;
+      height: 24px;
+      &-wrap {
+        position: absolute;
+        display: flex;
+        visibility: hidden;
+        overflow: hidden;
+      }
+    }
+  }
+}
