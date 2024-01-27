@@ -13,27 +13,25 @@
   height: 54px;
 }
 .video__creator-section {
+  display: flex;
+  align-items: center;
 }
-// .thumbs {
-//   g {
-//     path {
-//       stroke: #000;
-//       // fill: #000;
-//     }
-//   }
-// }
 .video__creator-info {
   margin-left: 12px;
 }
 .creator__name {
   font-size: 16px;
+  line-height: 22px;
   font-weight: 500;
   color: #0f0f0f;
 }
 .subscriber__number {
-  margin-right: 4px;
   font-size: 12px;
+  line-height: 18px;
   color: #606060;
+}
+.video__subscribe-btn {
+  margin-left: 24px;
 }
 .video__reaction-section {
   button + button {

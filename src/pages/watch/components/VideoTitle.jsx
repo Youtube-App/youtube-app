@@ -1,10 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ProfileBtn } from 'components/buttons/ProfileBtn';
-import { Player } from '@lottiefiles/react-lottie-player';
-import thumbLast from 'json/thumbs_last.json';
+import { BtnEmotion } from 'components/buttons/BtnEmotion';
+import { BtnRoundBlack } from 'components/buttons/BtnRoundBlack';
+import { BtnRoundGray } from 'components/buttons/BtnRoundGray';
+import { BtnCircleGray } from 'components/buttons/BtnCircleGray';
+import { DefaultDropdown } from 'components/dropdowns/DefaultDropdown';
+import { LiaDownloadSolid } from 'react-icons/lia';
+import { PiScissors } from 'react-icons/pi';
+import { IoFlagOutline } from 'react-icons/io5';
+import { BiListPlus } from 'react-icons/bi';
 
 export const VideoTitle = ({ title, creator, subscriber, likes }) => {
+  const moreDropdown = [
+    {
+      type: 'menu',
+      icon: <LiaDownloadSolid />,
+      label: '오프라인 저장',
+    },
+    {
+      type: 'menu',
+      icon: <PiScissors />,
+      label: '클립',
+    },
+    {
+      type: 'menu',
+      icon: <BiListPlus />,
+      label: '저장',
+    },
+    {
+      type: 'menu',
+      icon: <IoFlagOutline />,
+      label: '신고',
+    },
+  ];
+
   return (
     <div className="video__title-wrapper">
       <div className="video__title-container">{title}</div>
@@ -15,16 +45,23 @@ export const VideoTitle = ({ title, creator, subscriber, likes }) => {
             <div className="creator__name">{creator}</div>
             <div className="subscriber__number">구독자 {subscriber}명</div>
           </div>
+          <div className="video__subscribe-btn">
+            <BtnRoundBlack label="구독" />
+          </div>
         </div>
-        <div className="video__reaction-section">{likes}</div>
-      </div>
-      <div className="thumbs">
-        <Player
-          src={thumbLast}
-          autoplay
-          keepLastFrame={true}
-          style={{ height: '100px', width: '100px' }}
-        ></Player>
+        <div className="video__reaction-section">
+          <BtnEmotion likes={likes} />
+          <BtnRoundGray
+            icon="share"
+            label="공유"
+          />
+          <BtnCircleGray icon="more">
+            <DefaultDropdown
+              size={'medium'}
+              list={moreDropdown}
+            />
+          </BtnCircleGray>
+        </div>
       </div>
     </div>
   );

@@ -86,6 +86,22 @@
       }
     }
   }
+
+  &-black {
+    background: #0f0f0f;
+    .btn__icon,
+    .btn__label {
+      color: #fff;
+    }
+    &:not(disabled) {
+      &:hover {
+        background: #272727;
+      }
+      &:active {
+        background: #525252;
+      }
+    }
+  }
 }
 
 .btn__round-square {
@@ -226,6 +242,69 @@
     }
     &:active {
       background: #cbd8e3;
+    }
+  }
+}
+
+.btn__emotion {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 36px;
+  border-radius: 999px;
+
+  button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 52px;
+    height: 36px;
+    background: #f2f2f2;
+    &:first-of-type {
+      padding: 0 16px 0 0;
+      border-radius: 999px 0 0 999px;
+      .btn__icon {
+        position: absolute;
+        left: 0;
+        top: -4px;
+        width: 50px;
+        height: 50px;
+      }
+      .btn__label {
+        margin-left: 40px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    &:last-of-type {
+      padding: 0 16px;
+      border-radius: 0 999px 999px 0;
+      .btn__icon {
+        width: 28px;
+        height: 28px;
+        img {
+          width: 28px;
+          height: 28px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &:nth-child(n + 2) {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 24px;
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+    &:hover {
+      background-color: #e5e5e5;
     }
   }
 }
