@@ -109,6 +109,20 @@
       }
     }
   }
+
+  &-gray-border {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    .btn__icon,
+    .btn__label {
+      color: #0f0f0f;
+    }
+    &:hover {
+      background: rgba(0, 0, 0, 0.1);
+    }
+    &:active {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 .btn__round-square {

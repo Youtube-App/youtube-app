@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import { useState } from 'react';
 import { ProfileBtn } from 'components/buttons/ProfileBtn';
+import { BtnRoundGrayBorder } from 'components/buttons/BtnRoundGrayBorder';
+import { AiOutlinePlaySquare } from 'react-icons/ai';
+import { LuUserSquare } from 'react-icons/lu';
+import { BtnRoundBlue } from 'components/buttons/BtnRoundBlue';
 
 export const VideoIntroduce = ({
   views,
@@ -24,12 +28,12 @@ export const VideoIntroduce = ({
           <div className="video__script-message">
             스크립트를 보면서 시청하세요.
           </div>
-          {/* 스크립트 표시 버튼 */}
+          <BtnRoundBlue label="스크립트 보기" />
         </div>
       </div>
       <div className="channel__introduce-container">
         <div className="channel__introduce-section">
-          <ProfileBtn />
+          <ProfileBtn size="xlarge" />
           <div className="channel__content">
             <div className="channel__name">{creator}</div>
             <div className="channel__subscribe-number">
@@ -38,8 +42,14 @@ export const VideoIntroduce = ({
           </div>
         </div>
         <div className="channel__introduce-btn">
-          {/* <BtnRoundGray label="동영상"/>
-          <BtnRoundGray label="정보"/> */}
+          <BtnRoundGrayBorder
+            iconPrepend={<AiOutlinePlaySquare />}
+            label="동영상"
+          />
+          <BtnRoundGrayBorder
+            iconPrepend={<LuUserSquare />}
+            label="정보"
+          />
         </div>
       </div>
     </div>
@@ -59,5 +69,5 @@ VideoIntroduce.defaultProps = {
   openDate: '2023. 12. 17',
   videoContents: '안녕하세요. 구독자님들 영상 소개 글입니다.',
   creator: '곰돌이 숭늉이',
-  subscriber: '잘 보고 갑니다.',
+  subscriber: '920',
 };
