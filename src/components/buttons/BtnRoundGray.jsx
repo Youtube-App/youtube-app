@@ -12,14 +12,14 @@ export const BtnRoundGray = ({ forClick, iconPrepend, iconAppend, label }) => {
   return (
     <button
       onClick={() => onClick()}
-      className={cn('btn__round-gray', {
+      className={cn('btn__round btn__round-gray', {
         'btn__round-gray--active': isSelected,
       })}
       type="button"
     >
-      {iconPrepend && <i className="btn__round-gray-icon">{iconPrepend}</i>}
+      {iconPrepend && <i className="btn__icon">{iconPrepend}</i>}
       <span className="btn__round-gray-label">{label}</span>
-      {iconAppend && <i className="btn__round-gray-icon">{iconAppend}</i>}
+      {iconAppend && <i className="btn__icon">{iconAppend}</i>}
     </button>
   );
 };

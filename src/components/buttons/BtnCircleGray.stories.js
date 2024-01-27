@@ -10,5 +10,6 @@ export const Gray = {
   args: {
     disabled: false,
     icon: <HiMiniMicrophone />,
+    size: '',
   },
 };

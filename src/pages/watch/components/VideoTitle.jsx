@@ -10,6 +10,8 @@ import { LiaDownloadSolid } from 'react-icons/lia';
 import { PiScissors } from 'react-icons/pi';
 import { IoFlagOutline } from 'react-icons/io5';
 import { BiListPlus } from 'react-icons/bi';
+import { PiShareFatLight } from 'react-icons/pi';
+import { IoIosMore } from 'react-icons/io';
 
 export const VideoTitle = ({ title, creator, subscriber, likes }) => {
   const moreDropdown = [
@@ -51,16 +53,23 @@ export const VideoTitle = ({ title, creator, subscriber, likes }) => {
         </div>
         <div className="video__reaction-section">
           <BtnEmotion likes={likes} />
-          <BtnRoundGray
-            icon="share"
-            label="공유"
-          />
-          <BtnCircleGray icon="more">
+          <div className="share-btn">
+            <BtnRoundGray
+              iconPrepend={<PiShareFatLight />}
+              label="공유"
+            />
+          </div>
+          <div className="more-btn">
             <DefaultDropdown
               size={'medium'}
               list={moreDropdown}
-            />
-          </BtnCircleGray>
+            >
+              <BtnCircleGray
+                size="small"
+                icon={<IoIosMore />}
+              />
+            </DefaultDropdown>
+          </div>
         </div>
       </div>
     </div>

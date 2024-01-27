@@ -2,11 +2,11 @@ import { BtnRoundGray } from './BtnRoundGray';
 import { IoMdArrowDropdown } from 'react-icons/io';
 
 export default {
-  title: 'Components/Buttons/BtnRoundgray',
+  title: 'Components/Buttons/BtnRoundGray',
   component: BtnRoundGray,
 };
 
-export const Roundgrey = {
+export const RoundGray = {
   args: {
     forClick: false,
     iconPrepend: <IoMdArrowDropdown />,

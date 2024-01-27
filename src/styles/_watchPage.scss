@@ -34,7 +34,12 @@
   margin-left: 24px;
 }
 .video__reaction-section {
-  button + button {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  .share-btn,
+  .more-btn {
     margin-left: 8px;
   }
 }
