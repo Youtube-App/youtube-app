@@ -9,7 +9,7 @@ export const BtnCircleGray = ({ disabled, icon, size }) => {
       className={cn('btn__circle-gray', `btn__circle-gray--${size}`)}
       disabled={disabled}
     >
-      <i className="btn__circle-gray-icon">{icon}</i>
+      <i className="btn__icon">{icon}</i>
     </button>
   );
 };
@@ -23,5 +23,5 @@ BtnCircleGray.propTypes = {
 BtnCircleGray.defaultProps = {
   disabled: false,
   icon: <HiMiniMicrophone />,
-  string: '',
+  size: '',
 };

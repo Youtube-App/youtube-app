@@ -1,0 +1,142 @@
+.related {
+  &__video {
+    &-container {
+      position: relative;
+      display: flex;
+      // width: 340px;
+      // max-width: 500px;
+      &:hover {
+        & .video__thumbnail-wrap {
+          border-radius: 0;
+        }
+      }
+    }
+    &-thumbnail {
+      position: relative;
+      max-width: 360px;
+      min-width: 240px;
+    }
+    &-details {
+      display: flex;
+      width: 100%;
+    }
+    &-desc {
+      padding-right: 24px;
+      margin-left: 16px;
+      .video {
+        &__title {
+          display: -webkit-box;
+          max-height: 52px;
+          font-family: 'Roboto', 'Arial', sans-serif;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 26px;
+          color: #0f0f0f;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          white-space: normal;
+          overflow: hidden;
+        }
+        &__channel-name {
+          display: block;
+          min-height: 18px;
+          margin-left: 8px;
+          font-family: 'Roboto', 'Arial', sans-serif;
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 400;
+          -webkit-line-clamp: 1;
+          text-overflow: ellipsis;
+          white-space: normal;
+          color: #606060;
+        }
+      }
+      .badge__simple-wrap {
+        margin-top: 8px;
+      }
+    }
+    &-count {
+      display: flex;
+      max-height: 40px;
+      font-family: 'Roboto', 'Arial', sans-serif;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: #606060;
+      -webkit-line-clamp: 2;
+      text-overflow: ellipsis;
+      white-space: normal;
+    }
+    &-txt {
+      margin-top: 12px;
+      max-height: 36px;
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: #606060;
+      -webkit-line-clamp: 2;
+      text-overflow: ellipsis;
+      white-space: normal;
+    }
+    &-badges {
+      display: flex;
+      margin-top: 8px;
+    }
+    &-dropdown {
+      // display: none;
+      position: absolute;
+      right: 0;
+      top: -10px;
+    }
+    &-container {
+      &:hover {
+        &-dropdown {
+          // display: block;
+        }
+      }
+    }
+  }
+  &__channel-info {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+  }
+  // size
+  &__video {
+    &-container--small {
+      .related__video-thumbnail {
+        min-width: 168px;
+        max-width: 168px;
+        height: 94px;
+      }
+      .related__video-desc {
+        padding-right: 24px;
+        margin-left: 8px;
+        .video {
+          &__title {
+            max-height: 40px;
+            font-size: 14px;
+            line-height: 20px;
+          }
+          &__channel-name {
+            margin-left: 0;
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+        .badge__simple-wrap {
+          margin-top: 0;
+        }
+      }
+      .related__total-info {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 4px;
+        .related__channel-info {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

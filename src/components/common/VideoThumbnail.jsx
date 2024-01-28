@@ -16,8 +16,10 @@ export const VideoThumbnail = () => {
 
 VideoThumbnail.propTypes = {
   VideoThumbnail: PropTypes.string,
+  // size: PropTypes.string,
 };
 
 VideoThumbnail.defaultProps = {
   VideoThumbnail: videoThumbnail,
+  // size: '',
 };
