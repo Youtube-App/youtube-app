@@ -382,39 +382,56 @@
 
 .subscription {
   &__btn {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    // display: flex;
     padding: 0 16px;
+    width: 60px;
     height: 36px;
     background: #0f0f0f;
     border-radius: 18px;
-    overflow: hidden;
-    transition: 1s;
-    &-wrap {
-      transition: 1s;
-    }
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: normal;
+    transition: 1s ease;
     &-text {
-      font-size: 14px;
-      line-height: 36px;
-      color: #fff;
-      font-weight: 500;
-      &-invisible {
-        position: absolute;
-        visibility: hidden;
-        & ~ .subscription__btn-lottie-wrap {
-          visibility: visible;
-          position: unset;
-        }
-      }
+      flex-shrink: 0;
     }
     &-lottie {
       width: 24px;
       height: 24px;
+      margin-left: -6px;
       &-wrap {
-        position: absolute;
-        display: flex;
+        // display: none;
         visibility: hidden;
         overflow: hidden;
+      }
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      visibility: hidden;
+      overflow: hidden;
+      svg {
+        width: 100%;
+      }
+    }
+    &-active {
+      width: 120px;
+      background: rgba(0, 0, 0, 0.05);
+      color: #000;
+      .subscription__btn-lottie-wrap {
+        visibility: visible;
+        // overflow: visible;
+        // display: block;
+      }
+      .subscription__btn-icon {
+        visibility: visible;
       }
     }
   }
