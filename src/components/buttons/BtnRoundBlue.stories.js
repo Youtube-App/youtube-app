@@ -7,6 +7,7 @@ export default {
 
 export const RoundBlue = {
   args: {
+    size: 'medium',
     forClick: false,
     label: '답글',
     disabled: false,

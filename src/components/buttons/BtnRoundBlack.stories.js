@@ -7,6 +7,7 @@ export default {
 
 export const RoundBlack = {
   args: {
+    size: 'medium',
     forClick: false,
     label: '답글',
     disabled: false,

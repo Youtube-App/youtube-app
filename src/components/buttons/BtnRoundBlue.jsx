@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-export const BtnRoundBlue = ({ forClick, icon, label, disabled }) => {
+export const BtnRoundBlue = ({ size, forClick, icon, label, disabled }) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const onClick = () => {
@@ -11,8 +11,8 @@ export const BtnRoundBlue = ({ forClick, icon, label, disabled }) => {
   return (
     <button
       type="button"
-      className={cn('btn__round btn__round-blue', {
-        'btn__round-blue--active': isSelected,
+      className={cn('btn--round btn--blue', `btn--${size}`, {
+        'btn--active': isSelected,
       })}
       disabled={disabled}
       onClick={() => onClick()}
@@ -24,6 +24,7 @@ export const BtnRoundBlue = ({ forClick, icon, label, disabled }) => {
 };
 
 BtnRoundBlue.propTypes = {
+  size: PropTypes.oneOf(['medium']),
   forClick: PropTypes.bool.isRequired,
   icon: PropTypes.element,
   label: PropTypes.string,
@@ -31,6 +32,7 @@ BtnRoundBlue.propTypes = {
 };
 
 BtnRoundBlue.defaultProps = {
+  size: 'medium',
   forClick: false,
   icon: null,
   label: '채널 공유',

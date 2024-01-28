@@ -1,36 +1,43 @@
-.btn__round {
+.btn--round {
   flex-wrap: nowrap;
   display: flex;
   align-items: center;
-  height: 36px;
-  padding: 0 16px;
-  font-size: 14px;
-  line-height: 36px;
   border-radius: 18px;
 
   .btn__icon {
-    width: 24px;
-    height: 24px;
-    line-height: 0;
-    &:first-child {
-      margin-right: 6px;
-    }
-    &:last-child {
-      margin-left: 6px;
-    }
     svg {
       width: 100%;
       height: 100%;
     }
   }
 
-  .btn__label {
+  &.btn--medium {
+    height: 36px;
+    padding: 0 16px;
     font-size: 14px;
     line-height: 36px;
-    font-weight: 500;
+    .btn__icon {
+      width: 24px;
+      height: 24px;
+      &:first-child {
+        margin-right: 6px;
+      }
+      &:last-child {
+        margin-left: 6px;
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .btn__label {
+      font-size: 14px;
+      line-height: 36px;
+      font-weight: 500;
+    }
   }
 
-  &-gray {
+  &.btn--gray {
     color: #0f0f0f;
     background: rgba(0, 0, 0, 0.05);
     .btn__icon,
@@ -45,7 +52,7 @@
     }
   }
 
-  &-ghost {
+  &.btn--ghost {
     .btn__icon,
     .btn__label {
       color: #0f0f0f;
@@ -58,7 +65,7 @@
     }
   }
 
-  &-ghost-blue {
+  &.btn--ghost-blue {
     .btn-icon,
     .btn-label {
       color: #065fd4;
@@ -71,7 +78,7 @@
     }
   }
 
-  &-blue {
+  &.btn--blue {
     background: #065fd4;
     .btn__icon,
     .btn__label {
@@ -94,7 +101,7 @@
     }
   }
 
-  &-black {
+  &.btn--black {
     background: #0f0f0f;
     .btn__icon,
     .btn__label {
@@ -110,7 +117,7 @@
     }
   }
 
-  &-gray-border {
+  &.btn--gray-border {
     justify-content: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     .btn__icon,
@@ -126,29 +133,41 @@
   }
 }
 
-.btn__round-square {
+.btn--round-square {
   flex-wrap: nowrap;
-  &-ghost {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  .btn__icon {
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &.btn--medium {
     padding: 0 16px;
     width: calc(100% - 12px);
     min-height: 40px;
     line-height: 40px;
-    border-radius: 10px;
-    &-icon {
-      margin-right: 24px;
+    .btn__icon {
       width: 24px;
       height: 24px;
-      line-height: 0;
-      svg {
-        width: 100%;
-        height: 100%;
-      }
+      margin-right: 24px;
     }
-    &-label {
+    .btn__label {
       font-size: 14px;
       font-weight: 400;
+    }
+  }
+
+  &.btn--ghost {
+    .btn__icon {
+      svg {
+        fill: #0f0f0f;
+      }
+    }
+    .btn__label {
       color: #0f0f0f;
     }
     &:hover {

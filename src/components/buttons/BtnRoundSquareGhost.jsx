@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PiHouseThin } from 'react-icons/pi';
+import cn from 'classnames';
 
-export const BtnRoundSquareGhost = ({ icon, label }) => {
+export const BtnRoundSquareGhost = ({ size, icon, label }) => {
   return (
-    <button className="btn__round btn__round-square-ghost">
+    <button className={cn('btn--round-square btn--ghost', `btn--${size}`)}>
       {icon && <i className="btn__icon">{icon}</i>}
       <span className="btn__label">{label}</span>
     </button>
@@ -12,11 +13,13 @@ export const BtnRoundSquareGhost = ({ icon, label }) => {
 };
 
 BtnRoundSquareGhost.propTypes = {
+  size: PropTypes.oneOf(['medium']),
   icon: PropTypes.element,
   label: PropTypes.string,
 };
 
 BtnRoundSquareGhost.defaultProps = {
+  size: 'medium',
   icon: <PiHouseThin />,
   label: '홈',
 };

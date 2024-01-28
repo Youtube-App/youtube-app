@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-export const BtnRoundGray = ({ forClick, iconPrepend, iconAppend, label }) => {
+export const BtnRoundGray = ({
+  size,
+  forClick,
+  iconPrepend,
+  iconAppend,
+  label,
+}) => {
   const [isSelected, setIsSelected] = useState(false);
 
   const onClick = () => {
@@ -12,19 +18,20 @@ export const BtnRoundGray = ({ forClick, iconPrepend, iconAppend, label }) => {
   return (
     <button
       onClick={() => onClick()}
-      className={cn('btn__round btn__round-gray', {
-        'btn__round-gray--active': isSelected,
+      className={cn('btn--round btn--gray', `btn--${size}`, {
+        'btn--active': isSelected,
       })}
       type="button"
     >
       {iconPrepend && <i className="btn__icon">{iconPrepend}</i>}
-      <span className="btn__round-gray-label">{label}</span>
+      <span className="btn__label">{label}</span>
       {iconAppend && <i className="btn__icon">{iconAppend}</i>}
     </button>
   );
 };
 
 BtnRoundGray.propTypes = {
+  size: PropTypes.oneOf(['medium']),
   forClick: PropTypes.bool.isRequired,
   iconPrepend: PropTypes.element,
   iconAppend: PropTypes.element,
@@ -32,6 +39,7 @@ BtnRoundGray.propTypes = {
 };
 
 BtnRoundGray.defaultProps = {
+  size: 'medium',
   forClick: false,
   iconPrepend: null,
   iconAppend: null,

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import cn from 'classnames';
 
 export const BtnRoundGrayBorder = ({
+  size,
   forClick,
   iconPrepend,
   iconAppend,
@@ -16,17 +18,18 @@ export const BtnRoundGrayBorder = ({
   return (
     <button
       onClick={() => onClick()}
-      className="btn__round btn__round-gray-border"
+      className={cn('btn--round btn--gray-border', `btn--${size}`)}
       type="button"
     >
       {iconPrepend && <i className="btn__icon">{iconPrepend}</i>}
-      <span className="btn__round-gray-label">{label}</span>
+      <span className="btn__label">{label}</span>
       {iconAppend && <i className="btn__icon">{iconAppend}</i>}
     </button>
   );
 };
 
 BtnRoundGrayBorder.propTypes = {
+  size: PropTypes.oneOf(['medium']),
   forClick: PropTypes.bool.isRequired,
   iconPrepend: PropTypes.element,
   iconAppend: PropTypes.element,
@@ -34,6 +37,7 @@ BtnRoundGrayBorder.propTypes = {
 };
 
 BtnRoundGrayBorder.defaultProps = {
+  size: 'medium',
   forClick: false,
   iconPrepend: null,
   iconAppend: null,

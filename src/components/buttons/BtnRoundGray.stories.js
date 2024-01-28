@@ -8,6 +8,7 @@ export default {
 
 export const RoundGray = {
   args: {
+    size: 'medium',
     forClick: false,
     iconPrepend: <IoMdArrowDropdown />,
     label: '답글 7개',
