@@ -79,22 +79,44 @@
       margin-top: 8px;
     }
   }
-  &__channel-info {
+  &__profile-btn-wrap {
     display: flex;
-    // align-items: center;
-    margin-top: 12px;
-    & .video__channel-name {
-      margin-left: 8px;
-      min-height: 18px;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-right: 16px;
+    max-width: 360px;
+    min-width: 240px;
+  }
+  &__channel {
+    &-info {
+      display: flex;
+      align-items: center;
+    }
+    &-desc {
+      display: flex;
+      flex-direction: column;
+      padding: 0 16px 16px 0;
+      margin-top: 12px;
       font-size: 12px;
       line-height: 18px;
       font-weight: 400;
-      -webkit-line-clamp: 1;
-      text-overflow: ellipsis;
-      white-space: normal;
+      & .video__channel-name {
+        margin-bottom: 8px;
+        max-height: 52px;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+        color: #0f0f0f;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        white-space: normal;
+      }
     }
-  }
-  &__channel-container {
-    display: flex;
+    &-count {
+    }
+    &-container {
+      display: flex;
+    }
   }
 }

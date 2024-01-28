@@ -13,12 +13,7 @@ export const VideoChannelName = ({ isLink, channelId, videoChannelName }) => {
           {videoChannelName}
         </Link>
       ) : (
-        <div
-          to={channelId ? `/channel/${channelId}` : '#'}
-          className={'video__channel-name'}
-        >
-          {videoChannelName}
-        </div>
+        <div className={'video__channel-name'}>{videoChannelName}</div>
       )}
     </>
   );
