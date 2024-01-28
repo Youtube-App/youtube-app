@@ -18,7 +18,7 @@ export const BtnEmotion = ({ likes }) => {
   };
 
   return (
-    <div className="btn__emotion">
+    <div className="emotion__btn">
       <button
         type="button"
         onClick={() => selectEmotion('like')}

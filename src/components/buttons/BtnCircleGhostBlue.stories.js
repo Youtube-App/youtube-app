@@ -8,6 +8,7 @@ export default {
 
 export const RoundGhostBlue = {
   args: {
+    size: 'medium',
     icon: <IoMdArrowDropdown />,
   },
 };

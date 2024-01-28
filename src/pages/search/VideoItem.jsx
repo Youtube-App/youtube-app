@@ -103,7 +103,10 @@ export const VideoItem = ({ size }) => {
           size={'medium'}
           list={replyDropdown}
         >
-          <BtnCircleGhost icon={<AiOutlineMore />} />
+          <BtnCircleGhost
+            size={size}
+            icon={<AiOutlineMore />}
+          />
         </DefaultDropdown>
       </div>
       {/* <div className="related__video-details"></div> */}
@@ -112,9 +115,9 @@ export const VideoItem = ({ size }) => {
 };
 
 VideoItem.propTypes = {
-  size: PropTypes.string,
+  size: PropTypes.oneOf(['medium', 'small']),
 };
 
 VideoItem.defaultProps = {
-  string: '',
+  size: 'medium',
 };

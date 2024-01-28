@@ -11,6 +11,7 @@ export default {
 
 export const Ghost = {
   args: {
+    size: 'medium',
     icon: <PiCameraPlus />,
     activeIcon: <PiCameraPlusFill />,
     hasAlerts: false,
@@ -19,10 +20,8 @@ export const Ghost = {
 
 export const Toggle = {
   args: {
-    icon: <PiCameraPlus />,
-    activeIcon: <PiCameraPlusFill />,
+    ...Ghost.args,
     isToggle: true,
-    hasAlerts: false,
   },
 };
 

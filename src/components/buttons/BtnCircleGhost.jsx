@@ -11,6 +11,7 @@ export const BtnCircleGhost = ({
   ariaLabel,
   isToggle,
   alertNum,
+  size,
 }) => {
   const [isActive, setIsActive] = useState(false);
   const [alerts, setAlerts] = useState(true);
@@ -25,25 +26,26 @@ export const BtnCircleGhost = ({
   return (
     <button
       onClick={onClick}
-      className={cn('btn__circle-ghost', {
-        'btn__circle-ghost--active': isActive,
+      className={cn('btn--circle btn--ghost', `btn--${size}`, {
+        'btn--active': isActive,
       })}
       disabled={disabled}
       aria-label={ariaLabel}
     >
       {isToggle ? (
-        <i className="btn__circle-ghost-icon">{isActive ? activeIcon : icon}</i>
+        <i className="btn__icon">{isActive ? activeIcon : icon}</i>
       ) : (
-        <i className="btn__circle-ghost-icon">{icon}</i>
+        <i className="btn__icon">{icon}</i>
       )}
       {alertNum !== 0 && alerts && (
-        <span className="btn__circle-ghost-alerts">{alertNum}</span>
+        <span className="btn__alerts">{alertNum}</span>
       )}
     </button>
   );
 };
 
 BtnCircleGhost.propTypes = {
+  size: PropTypes.oneOf(['medium', 'small']),
   disabled: PropTypes.bool,
   isToggle: PropTypes.bool,
   icon: PropTypes.element,
@@ -54,6 +56,7 @@ BtnCircleGhost.propTypes = {
 };
 
 BtnCircleGhost.defaultProps = {
+  size: 'medium',
   disabled: false,
   isToggle: false,
   icon: <PiCameraPlus />,

@@ -84,15 +84,15 @@
       margin-top: 8px;
     }
     &-dropdown {
-      // display: none;
+      display: none;
       position: absolute;
       right: 0;
-      top: -10px;
+      top: -6px;
     }
     &-container {
       &:hover {
-        &-dropdown {
-          // display: block;
+        .related__video-dropdown {
+          display: block;
         }
       }
     }

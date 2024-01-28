@@ -6,7 +6,7 @@ import cn from 'classnames';
 export const BtnCircleGray = ({ disabled, icon, size }) => {
   return (
     <button
-      className={cn('btn__circle-gray', `btn__circle-gray--${size}`)}
+      className={cn('btn--circle btn--gray', `btn--${size}`)}
       disabled={disabled}
     >
       <i className="btn__icon">{icon}</i>
@@ -15,13 +15,13 @@ export const BtnCircleGray = ({ disabled, icon, size }) => {
 };
 
 BtnCircleGray.propTypes = {
+  size: PropTypes.oneOf(['medium', 'small']),
   disabled: PropTypes.bool,
   icon: PropTypes.element,
-  size: PropTypes.string,
 };
 
 BtnCircleGray.defaultProps = {
+  size: 'medium',
   disabled: false,
   icon: <HiMiniMicrophone />,
-  size: '',
 };

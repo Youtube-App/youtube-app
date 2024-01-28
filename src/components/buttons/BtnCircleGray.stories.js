@@ -8,8 +8,8 @@ export default {
 
 export const Gray = {
   args: {
-    disabled: false,
+    size: 'medium',
     icon: <HiMiniMicrophone />,
-    size: '',
+    disabled: false,
   },
 };
