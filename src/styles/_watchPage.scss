@@ -1,3 +1,19 @@
+.watch__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  .watch__video-container {
+    width: calc(100% - 402px);
+    padding: 24px;
+  }
+  .watch__related-container {
+    padding: 0 24px 0 0;
+    width: 402px;
+    .watch__related-item:nth-child(n + 2) {
+      margin-top: 8px;
+    }
+  }
+}
+
 // .video__title-wrapper
 .video__title-container {
   font-family: Roboto;
@@ -47,6 +63,7 @@
 // .video__introduce-container
 .video__introduce-wrapper {
   padding: 12px;
+  margin-top: 12px;
   background: #f2f2f2;
   border-radius: 12px;
 }

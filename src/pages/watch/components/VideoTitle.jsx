@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ProfileBtn } from 'components/buttons/ProfileBtn';
 import { BtnEmotion } from 'components/buttons/BtnEmotion';
-import { BtnRoundBlack } from 'components/buttons/BtnRoundBlack';
+import { SubscriptionBtn } from 'components/buttons/SubscriptionBtn';
 import { BtnRoundGray } from 'components/buttons/BtnRoundGray';
 import { BtnCircleGray } from 'components/buttons/BtnCircleGray';
 import { DefaultDropdown } from 'components/dropdowns/DefaultDropdown';
@@ -48,7 +48,7 @@ export const VideoTitle = ({ title, creator, subscriber, likes }) => {
             <div className="subscriber__number">구독자 {subscriber}명</div>
           </div>
           <div className="video__subscribe-btn">
-            <BtnRoundBlack label="구독" />
+            <SubscriptionBtn />
           </div>
         </div>
         <div className="video__reaction-section">

@@ -104,7 +104,7 @@ export const VideoItem = ({ size }) => {
           list={replyDropdown}
         >
           <BtnCircleGhost
-            size={size}
+            size="xSmall"
             icon={<AiOutlineMore />}
           />
         </DefaultDropdown>
