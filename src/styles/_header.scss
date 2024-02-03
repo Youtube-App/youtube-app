@@ -1,0 +1,42 @@
+.main__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 56px;
+  padding: 0 16px;
+}
+
+.main__menu-container,
+.main__search-container,
+.main__user-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.main__logo {
+  width: 90px;
+  margin-left: 16px;
+}
+
+.main__input-section {
+  width: 632px;
+  padding: 0 4px;
+  margin-left: 40px;
+}
+
+.main__mic-btn {
+  margin-left: 12px;
+}
+
+.main__user-btn-section {
+  margin-right: 8px;
+}
+
+.main__user-profile-section {
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  padding: 0 6px;
+}

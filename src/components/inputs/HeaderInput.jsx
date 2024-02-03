@@ -4,7 +4,7 @@ import { GoSearch } from 'react-icons/go';
 import { MdKeyboardAlt } from 'react-icons/md';
 import { TfiClose } from 'react-icons/tfi';
 
-export const HeaderInput = ({ state, placeholder }) => {
+export const HeaderInput = ({ placeholder }) => {
   const headerInput = useRef(null);
 
   function onMouseKeyboard() {
@@ -12,7 +12,7 @@ export const HeaderInput = ({ state, placeholder }) => {
   }
 
   return (
-    <div className={`header__input-wrapper${state && `--${state}`}`}>
+    <div className={'header__input-wrapper'}>
       <div className="header__input-container">
         <i className="header__search-icon">
           <GoSearch />
@@ -33,7 +33,10 @@ export const HeaderInput = ({ state, placeholder }) => {
           <TfiClose />
         </i>
       </div>
-      <button className="header__submit-btn" type="button">
+      <button
+        className="header__submit-btn"
+        type="button"
+      >
         <i className="header__input-btn-icon">
           <GoSearch />
         </i>
@@ -43,11 +46,11 @@ export const HeaderInput = ({ state, placeholder }) => {
 };
 
 HeaderInput.propTypes = {
-  state: PropTypes.bool,
+  // state: PropTypes.bool,
   placeholder: PropTypes.string,
 };
 
 HeaderInput.defaultProps = {
-  state: false,
+  // state: false,
   placeholder: '입력하세요.',
 };
