@@ -6,8 +6,5 @@ export default {
 };
 
 export const Header = {
-  args: {
-    placeholder: '검색',
-    state: '',
-  },
+  args: {},
 };

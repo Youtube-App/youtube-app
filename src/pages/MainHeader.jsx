@@ -1,12 +1,15 @@
 import React from 'react';
 import { BtnCircleGhost } from 'components/buttons/BtnCircleGhost';
+import { BtnCircleGhostActive } from 'components/buttons/BtnCircleGhostActive';
 import { BtnCircleGray } from 'components/buttons/BtnCircleGray';
 import youtubeLogo from 'images/youtube-logo.svg';
 import { HeaderInput } from 'components/inputs/HeaderInput';
 import { ProfileBtn } from 'components/buttons/ProfileBtn';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import { HiOutlineVideoCamera } from 'react-icons/hi2';
+import { BsCameraVideo } from 'react-icons/bs';
+import { BsCameraVideoFill } from 'react-icons/bs';
 import { BsBell } from 'react-icons/bs';
+import { BsBellFill } from 'react-icons/bs';
 import { IoMicSharp } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
@@ -34,10 +37,19 @@ export const MainHeader = () => {
       </div>
       <div className="main__user-container">
         <div className="main__user-btn-section">
-          <BtnCircleGhost icon={<HiOutlineVideoCamera />} />
+          <BtnCircleGhostActive
+            isToggle={true}
+            icon={<BsCameraVideo />}
+            activeIcon={<BsCameraVideoFill />}
+          />
         </div>
         <div className="main__user-btn-section">
-          <BtnCircleGhost icon={<BsBell />} />
+          <BtnCircleGhostActive
+            isActive={true}
+            isToggle={true}
+            icon={<BsBell />}
+            activeIcon={<BsBellFill />}
+          />
         </div>
         <div className="main__user-profile-section">
           <ProfileBtn size={'medium'} />
