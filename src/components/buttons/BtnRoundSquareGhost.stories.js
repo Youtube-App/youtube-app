@@ -11,5 +11,6 @@ export const RoundSquareGhost = {
     size: 'medium',
     icon: <PiHouseThin />,
     label: '홈',
+    alert: false,
   },
 };

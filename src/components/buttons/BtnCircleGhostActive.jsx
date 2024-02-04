@@ -52,7 +52,6 @@ BtnCircleGhostActive.propTypes = {
   activeIcon: PropTypes.element,
   ariaLabel: PropTypes.string.isRequired,
   alertNum: PropTypes.number,
-  hasAlerts: PropTypes.bool,
 };
 
 BtnCircleGhostActive.defaultProps = {
@@ -62,6 +61,5 @@ BtnCircleGhostActive.defaultProps = {
   icon: <PiCameraPlus />,
   activeIcon: <PiCameraPlusFill />,
   ariaLabel: '만들기',
-  hasAlerts: false,
   alertNum: 0,
 };

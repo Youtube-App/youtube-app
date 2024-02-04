@@ -14,7 +14,6 @@ export const Ghost = {
     size: 'medium',
     icon: <PiCameraPlus />,
     activeIcon: <PiCameraPlusFill />,
-    hasAlerts: false,
   },
 };
 
@@ -32,7 +31,6 @@ export const Alert = {
     activeIcon: <BsBellFill />,
     isToggle: true,
     ariaLabel: '알림',
-    hasAlerts: true,
     alertNum: 5,
   },
 };
