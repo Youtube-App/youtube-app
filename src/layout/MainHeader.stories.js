@@ -1,7 +1,7 @@
 import { MainHeader } from './MainHeader.jsx';
 
 export default {
-  title: 'Components/MainHeader',
+  title: 'Layout/MainHeader',
   component: MainHeader,
 };
 

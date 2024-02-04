@@ -20,6 +20,7 @@ export const ChannelInfo = () => {
           <VideoChannelName
             isLink={false}
             videoChannelName={'채널십오야'}
+            channelId={'dfd'}
           />
           <div className="search__channel-count">
             <ChannelIdName />

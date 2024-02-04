@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const CommonDesc = ({ txt }) => {
-  return <span className="common__desc">{txt}</span>;
+  return <span className="common-desc">{txt}</span>;
 };
 
 CommonDesc.propTypes = {

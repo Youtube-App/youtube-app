@@ -140,6 +140,14 @@
           margin-top: 0;
         }
       }
+      .video__thumbnail-wrap {
+        border-radius: 8px;
+      }
+      &:hover {
+        & .video__thumbnail-wrap {
+          border-radius: 8px;
+        }
+      }
     }
   }
 }

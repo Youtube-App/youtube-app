@@ -4,7 +4,7 @@ import { VideoIntroduce } from './components/VideoIntroduce';
 import { CommentHeader } from '../../components/common/CommentHeader';
 import { DefaultComment } from 'components/comments/DefaultComment';
 import { ReplyComment } from 'components/comments/ReplyComment';
-import { VideoItem } from 'pages/search/VideoItem';
+import { VideoItem } from 'components/common/VideoItem';
 
 export const WatchPage = () => {
   return (

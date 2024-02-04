@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+// import { SwiperComponent } from 'components/common/SwiperComponent';
 
 export const TabBtnPrimary = ({ label }) => {
   const [isSelected, setIsSelected] = useState(0);
@@ -9,19 +10,23 @@ export const TabBtnPrimary = ({ label }) => {
     setIsSelected(idx);
   };
 
-  return label.map((item, idx) => {
-    return (
-      <button
-        key={idx}
-        onClick={() => onClick(idx)}
-        className={cn('tab__btn-primary', {
-          'tab__btn-primary--active': idx === isSelected,
-        })}
-      >
-        {item}
-      </button>
-    );
-  });
+  return (
+    <div className="tab__btn-primary-wrap">
+      {label.map((item, index) => {
+        return (
+          <button
+            key={index}
+            onClick={() => onClick(index)}
+            className={cn('tab__btn-primary', {
+              'tab__btn-primary--active': index === isSelected,
+            })}
+          >
+            {item}
+          </button>
+        );
+      })}
+    </div>
+  );
 };
 
 TabBtnPrimary.propTypes = {
@@ -30,4 +35,5 @@ TabBtnPrimary.propTypes = {
 
 TabBtnPrimary.defaultProps = {
   label: ['홈', '동영상', '라이브'],
+  spaceBetween: 6,
 };

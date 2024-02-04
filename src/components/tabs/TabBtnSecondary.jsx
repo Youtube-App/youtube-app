@@ -9,19 +9,23 @@ export const TabBtnSecondary = ({ label }) => {
     setIsSelected(idx);
   };
 
-  return label.map((item, idx) => {
-    return (
-      <button
-        key={idx}
-        onClick={() => onClick(idx)}
-        className={cn('tab__btn-secondary', {
-          'tab__btn-secondary--active': idx === isSelected,
-        })}
-      >
-        {item}
-      </button>
-    );
-  });
+  return (
+    <div className="tab__btn-secondary-wrap">
+      {label.map((item, idx) => {
+        return (
+          <button
+            key={idx}
+            onClick={() => onClick(idx)}
+            className={cn('tab__btn-secondary', {
+              'tab__btn-secondary--active': idx === isSelected,
+            })}
+          >
+            {item}
+          </button>
+        );
+      })}
+    </div>
+  );
 };
 
 TabBtnSecondary.propTypes = {

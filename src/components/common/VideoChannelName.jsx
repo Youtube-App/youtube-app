@@ -20,7 +20,7 @@ export const VideoChannelName = ({ isLink, channelId, videoChannelName }) => {
 };
 
 VideoChannelName.propTypes = {
-  isLink: PropTypes.bool.required,
+  isLink: PropTypes.bool.isRequired,
   videoChannelName: PropTypes.string.isRequired,
   channelId: PropTypes.string.isRequired,
 };

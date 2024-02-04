@@ -15,6 +15,7 @@ import { GoCircleSlash } from 'react-icons/go';
 import { IoArrowUndoOutline } from 'react-icons/io5';
 import { VscReport } from 'react-icons/vsc';
 import cn from 'classnames';
+import { Link } from 'react-router-dom';
 
 export const VideoItem = ({ size }) => {
   const replyDropdown = [
@@ -70,10 +71,10 @@ export const VideoItem = ({ size }) => {
         `related__video-container--${size}`,
       )}
     >
-      <div className="related__video-thumbnail">
+      <Link className="related__video-thumbnail">
         <VideoThumbnail size={size} />
         <VideoDuration time={'5:20'} />
-      </div>
+      </Link>
       <div className="related__video-desc">
         <VideoTitle />
         <div className="related__total-info">
@@ -88,7 +89,11 @@ export const VideoItem = ({ size }) => {
                 to={'channelId'}
               />
             )}
-            <VideoChannelName videoChannelName={'태계일주 베이스캠프'} />
+            <VideoChannelName
+              isLink={false}
+              videoChannelName={'태계일주 베이스캠프'}
+              channelId={'dfk'}
+            />
           </div>
         </div>
         {size !== 'small' && (
@@ -104,7 +109,7 @@ export const VideoItem = ({ size }) => {
           list={replyDropdown}
         >
           <BtnCircleGhost
-            size="xSmall"
+            size="small"
             icon={<AiOutlineMore />}
           />
         </DefaultDropdown>

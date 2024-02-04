@@ -1,4 +1,11 @@
 .main {
+  &__video-item-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 340px);
+    column-gap: 16px;
+    row-gap: 16px;
+    padding-top: 24px;
+  }
   &__video {
     &-container {
       width: 340px;
@@ -16,6 +23,7 @@
     }
     &-details {
       display: flex;
+      position: relative;
       margin-top: 12px;
       width: 100%;
     }
@@ -39,12 +47,18 @@
         }
         &__channel-name {
           display: block;
+          display: -webkit-box;
           margin-top: 4px;
           font-family: 'Roboto', 'Arial', sans-serif;
           font-size: 14px;
           line-height: 20px;
           font-weight: 400;
           color: #606060;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          white-space: normal;
+          overflow: hidden;
         }
       }
     }

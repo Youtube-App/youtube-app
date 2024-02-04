@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import profileImg from '../../images/ex-img-profile.jpeg';
 import { Link } from 'react-router-dom';
 
-export const ProfileBtn = ({ isBtn, size, channelId, profileImg }) => {
-  return isBtn ? (
+export const ProfileBtn = ({ isLink, size, channelId, profileImg }) => {
+  return isLink ? (
     <Link
       className={`profile__btn ${size && `profile__btn--${size}`}`}
       to={channelId ? `/channel/${channelId}` : '#'}
@@ -31,7 +31,7 @@ export const ProfileBtn = ({ isBtn, size, channelId, profileImg }) => {
 };
 
 ProfileBtn.propTypes = {
-  isBtn: PropTypes.bool,
+  isLink: PropTypes.bool,
   size: PropTypes.oneOf([
     'xSmall',
     'small',
@@ -46,7 +46,7 @@ ProfileBtn.propTypes = {
 };
 
 ProfileBtn.defaultProps = {
-  isBtn: true,
+  isLink: true,
   size: 'small',
   profileImg,
   parameters: {

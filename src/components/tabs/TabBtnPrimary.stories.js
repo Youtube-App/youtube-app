@@ -7,6 +7,6 @@ export default {
 
 export const Primary = {
   args: {
-    label: ['전체', '음악', '동물'],
+    label: ['전체', '동물', '뉴스', '코메디', '게임'],
   },
 };
