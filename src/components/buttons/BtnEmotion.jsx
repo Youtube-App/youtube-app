@@ -7,13 +7,14 @@ import thumbDownFillIcon from 'images/icon-thumbs-fill.svg';
 import thumbDownOutlineIcon from 'images/icon-thumbs-outline.svg';
 
 export const BtnEmotion = ({ likes }) => {
-  const [isSelected, setIsSelected] = useState(false);
+  const [selectedEmotion, setSelectedEmotion] = useState();
+  // 좋아요 싫어요 암것도 아니에여
 
-  const selectEmotion = (emotion) => {
-    if (isSelected !== emotion) {
-      setIsSelected(emotion);
-    } else if (isSelected === emotion) {
-      setIsSelected(false);
+  const clickLike = (emotion) => {
+    if (selectedEmotion === emotion) {
+      setSelectedEmotion();
+    } else {
+      setSelectedEmotion(emotion);
     }
   };
 
@@ -21,29 +22,32 @@ export const BtnEmotion = ({ likes }) => {
     <div className="emotion__btn">
       <button
         type="button"
-        onClick={() => selectEmotion('like')}
+        onClick={() => clickLike('like')}
       >
-        <i className="btn__icon">
-          {
-            <Player
-              src={thumbUp}
-              autoplay
-              keepLastFrame={true}
-              // style={{ height: '50px', width: '50px' }}
-            ></Player>
-          }
-        </i>
+        {selectedEmotion === 'like' ? (
+          <i className="btn__icon">
+            {
+              <Player
+                src={thumbUp}
+                autoplay
+                keepLastFrame={true}
+              ></Player>
+            }
+          </i>
+        ) : (
+          <i className="btn__icon"></i>
+        )}
         <span className="btn__label">{likes}</span>
       </button>
       <button
         type="button"
-        onClick={() => selectEmotion('dislike')}
+        onClick={() => clickLike('dislike')}
         className={cn({
-          'btn--active': isSelected === 'dislike',
+          'btn--active': selectedEmotion === 'dislike',
         })}
       >
         <i className="btn__icon">
-          {isSelected === 'dislike' ? (
+          {selectedEmotion === 'dislike' ? (
             <img
               src={thumbDownFillIcon}
               alt=""

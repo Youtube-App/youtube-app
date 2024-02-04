@@ -29,7 +29,7 @@ import profileImg from 'images/ex-img-profile.jpeg';
 import cn from 'classnames';
 // import PropTypes from 'prop-types';
 
-export const MainLnb = () => {
+export const LayoutLnb = () => {
   const [isActive, setIsActive] = useState(false);
 
   const basicMenu = [
@@ -393,6 +393,6 @@ export const MainLnb = () => {
   );
 };
 
-MainLnb.propTypes = {};
+LayoutLnb.propTypes = {};
 
-MainLnb.defaultProps = {};
+LayoutLnb.defaultProps = {};
