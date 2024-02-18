@@ -74,8 +74,11 @@ export const VideoItem = ({ videos }) => {
           channelId={videos.snippet.channelId}
         />
         <div className="main__video-desc">
-          <VideoTitle />
-          <VideoChannelName isLink />
+          <VideoTitle videoTitle={videos.snippet.title} />
+          <VideoChannelName
+            videoChannelName={videos.snippet.channelTitle}
+            isLink
+          />
           <div className="main__video-count">
             <VideoViews />
             <UploadTime />
