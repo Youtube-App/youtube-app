@@ -1,5 +1,5 @@
 import { TabBtnPrimary } from 'components/tabs/TabBtnPrimary';
-import { VideoItem } from './components/VideoItem';
+// import { VideoItem } from './components/VideoItem';
 
 export const MainPage = () => {
   return (
@@ -10,18 +10,8 @@ export const MainPage = () => {
         </div>
         <section className="main__section">
           <div className="main__video-item-wrap">
-            <VideoItem />
-            <VideoItem />
-            <VideoItem />
-            <VideoItem />
-            <VideoItem />
-            <VideoItem />
-            <VideoItem />
-            <VideoItem />
-            <VideoItem />
-            <VideoItem />
-            <VideoItem />
-            <VideoItem />
+            {/* <VideoItem /> */}
+            <div className="test">dfdv</div>
           </div>
         </section>
       </div>
