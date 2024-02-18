@@ -16,7 +16,6 @@ export const LayoutPage = () => {
           <LayoutLnbPopup />
         </div>
         <Outlet />
-        {/* <SearchPage /> */}
       </div>
     </div>
   );
