@@ -1,1 +1,18 @@
-
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+}
+.common-inner {
+  position: relative;
+  display: flex;
+  .lnb-area {
+    position: fixed;
+    top: $headerHeight;
+    left: 0;
+    height: calc(100vh - $headerHeight);
+  }
+}

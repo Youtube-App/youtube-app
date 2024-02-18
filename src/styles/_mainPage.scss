@@ -1,10 +1,27 @@
 .main {
+  $wrapperTopPadding: $headerHeight + 10px;
+  &__inner {
+    position: relative;
+  }
+  &__wrapper {
+    padding: $wrapperTopPadding + 10px 20px 24px 260px;
+    background: #fff;
+  }
+  &__header {
+    position: fixed;
+    top: $headerHeight;
+    left: 260px;
+    padding: 10px 0 20px;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+  }
   &__video-item-wrap {
     display: grid;
     grid-template-columns: repeat(4, 340px);
     column-gap: 16px;
     row-gap: 16px;
-    padding-top: 24px;
+    padding-top: $headerHeight;
   }
   &__video {
     &-container {

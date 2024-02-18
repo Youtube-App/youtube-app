@@ -1,14 +1,22 @@
 import { MainHeader } from 'layout/MainHeader';
-import { SearchPage } from 'pages/search/SearchPage';
-// import { Outlet } from 'react-router-dom';
+// import { SearchPage } from 'pages/search/SearchPage';
+import { Outlet } from 'react-router-dom';
+import { LayoutLnb } from './LayoutLnb';
+import { LayoutLnbPopup } from './LayoutLnbPopup';
 
 export const LayoutPage = () => {
   return (
     <div className="common-wrap">
-      <MainHeader />
+      <header className="header">
+        <MainHeader />
+      </header>
       <div className="common-inner">
-        {/* <Outlet /> */}
-        <SearchPage />
+        <div className="lnb-area">
+          <LayoutLnb />
+          <LayoutLnbPopup />
+        </div>
+        <Outlet />
+        {/* <SearchPage /> */}
       </div>
     </div>
   );

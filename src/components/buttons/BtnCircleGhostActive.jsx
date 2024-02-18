@@ -30,7 +30,7 @@ export const BtnCircleGhostActive = ({
         'btn--active': isActive,
       })}
       disabled={disabled}
-      aria-label={ariaLabel}
+      aria-label={isActive ? ariaLabel.active : ariaLabel.default}
     >
       {isToggle ? (
         <i className="btn__icon">{isActive ? activeIcon : icon}</i>
@@ -50,7 +50,7 @@ BtnCircleGhostActive.propTypes = {
   isToggle: PropTypes.bool,
   icon: PropTypes.element,
   activeIcon: PropTypes.element,
-  ariaLabel: PropTypes.string.isRequired,
+  ariaLabel: PropTypes.object.isRequired,
   alertNum: PropTypes.number,
 };
 
@@ -60,6 +60,9 @@ BtnCircleGhostActive.defaultProps = {
   isToggle: false,
   icon: <PiCameraPlus />,
   activeIcon: <PiCameraPlusFill />,
-  ariaLabel: '만들기',
+  ariaLabel: {
+    default: '만들기',
+    active: '만들기 활성',
+  },
   alertNum: 0,
 };

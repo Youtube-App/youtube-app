@@ -27,9 +27,8 @@ import { IoMusicalNotesSharp } from 'react-icons/io5';
 import { ProfileBtn } from 'components/buttons/ProfileBtn';
 import profileImg from 'images/ex-img-profile.jpeg';
 import cn from 'classnames';
-// import PropTypes from 'prop-types';
 
-export const LayoutLnb = () => {
+export const LayoutLnbPopup = () => {
   const [isActive, setIsActive] = useState(false);
 
   const basicMenu = [
@@ -247,7 +246,7 @@ export const LayoutLnb = () => {
       link: '/',
     },
   ];
-  if (window.location.pathname === '/watch') return null;
+
   return (
     <div className="lnb__wrapper">
       <div className="lnb__container">
@@ -393,6 +392,6 @@ export const LayoutLnb = () => {
   );
 };
 
-LayoutLnb.propTypes = {};
+LayoutLnbPopup.propTypes = {};
 
-LayoutLnb.defaultProps = {};
+LayoutLnbPopup.defaultProps = {};

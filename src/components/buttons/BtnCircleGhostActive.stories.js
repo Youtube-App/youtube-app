@@ -30,7 +30,10 @@ export const Alert = {
     icon: <BsBell />,
     activeIcon: <BsBellFill />,
     isToggle: true,
-    ariaLabel: '알림',
+    ariaLabel: {
+      default: '알림 보기',
+      active: '알림 보기 활성',
+    },
     alertNum: 5,
   },
 };
