@@ -12,8 +12,9 @@ import { AiOutlineMore } from 'react-icons/ai';
 import { IoArrowUndoOutline, IoFlagOutline } from 'react-icons/io5';
 import { GoCircleSlash } from 'react-icons/go';
 import { SlMinus } from 'react-icons/sl';
+import PropTypes from 'prop-types';
 
-export const VideoItem = () => {
+export const VideoItem = ({ item }) => {
   const replyDropdown = [
     {
       type: 'menu',
@@ -62,7 +63,7 @@ export const VideoItem = () => {
   return (
     <div className="main__video-container">
       <div className="main__video-thumbnail">
-        <VideoThumbnail />
+        <VideoThumbnail VideoThumbnail={item.snippet.thumbnails} />
         <VideoDuration />
       </div>
       <div className="main__video-details">
@@ -86,4 +87,22 @@ export const VideoItem = () => {
       </div>
     </div>
   );
+};
+
+VideoThumbnail.propTypes = {
+  item: PropTypes.object,
+  videoThumbnail: PropTypes.string,
+  snippet: PropTypes.object,
+  thumbnails: PropTypes.string,
+  // size: PropTypes.string,
+};
+
+VideoThumbnail.defaultProps = {
+  item: {
+    snippet: {
+      thumbnails: '23',
+    },
+  },
+  videoThumbnail: '23',
+  // size: '',
 };

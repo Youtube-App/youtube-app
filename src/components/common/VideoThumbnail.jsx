@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import videoThumbnail from '../../images/ex-img-videoThumbnail.webp';
+// import videoThumbnail from '../../images/ex-img-videoThumbnail.webp';
 
-export const VideoThumbnail = () => {
+export const VideoThumbnail = ({ VideoThumbnail }) => {
   return (
     <div className="video__thumbnail-wrap">
       <img
         className="video__thumbnail-img"
-        src={videoThumbnail}
+        src={VideoThumbnail}
         alt=""
       />
     </div>
@@ -20,6 +20,6 @@ VideoThumbnail.propTypes = {
 };
 
 VideoThumbnail.defaultProps = {
-  VideoThumbnail: videoThumbnail,
+  VideoThumbnail: '232',
   // size: '',
 };

@@ -1,5 +1,5 @@
 import { TabBtnPrimary } from 'components/tabs/TabBtnPrimary';
-// import { VideoItem } from './components/VideoItem';
+import { PopularVideoPage } from './components/PopularVideoPage';
 
 export const MainPage = () => {
   return (
@@ -10,8 +10,7 @@ export const MainPage = () => {
         </div>
         <section className="main__section">
           <div className="main__video-item-wrap">
-            {/* <VideoItem /> */}
-            <div className="test">dfdv</div>
+            <PopularVideoPage />
           </div>
         </section>
       </div>
