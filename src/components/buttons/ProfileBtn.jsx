@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import profileImg from '../../images/ex-img-profile.jpeg';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-export const ProfileBtn = ({ isLink, size, channelId, profileImg }) => {
+export const ProfileBtn = ({ isLink, size, channelId }) => {
+  const [profileImg, setProfileImg] = useState('');
+
+  useEffect(() => {
+    if (channelId) {
+      const data = async () => {
+        const res = await axios.get(
+          'https://www.googleapis.com/youtube/v3/channels',
+          {
+            params: {
+              part: 'snippet',
+              id: channelId,
+              key: process.env.REACT_APP_GOOGLE_API_KEY,
+            },
+          },
+        );
+        console.log(res.data, 'thumbnail');
+
+        return setProfileImg(res.data.items[0].snippet.thumbnails.default.url);
+      };
+      data();
+    }
+  }, [channelId]);
+
   return isLink ? (
     <Link
       className={`profile__btn ${size && `profile__btn--${size}`}`}

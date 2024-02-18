@@ -69,7 +69,10 @@ export const VideoItem = ({ videos }) => {
         <VideoDuration />
       </div>
       <div className="main__video-details">
-        <ProfileBtn />
+        <ProfileBtn
+          size={'medium'}
+          channelId={videos.snippet.channelId}
+        />
         <div className="main__video-desc">
           <VideoTitle />
           <VideoChannelName isLink />
