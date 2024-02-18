@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 export const NameInput = ({ placeholder }) => {
   return (
     <div className="name__input-wrapper">
-      <input className="name__input" placeholder={placeholder} />
+      <input
+        className=" name__input"
+        placeholder={placeholder}
+      />
       {/* <div className="name__count-container">
         countNum/maxNum
       </div> */}

@@ -112,7 +112,7 @@ export const ReplyComment = ({ userName, date, comment, activeAnswer }) => {
 };
 
 ReplyComment.propTypes = {
-  activeAnswer: PropTypes.boolean,
+  activeAnswer: PropTypes.bool,
   userName: PropTypes.string.isRequired,
   date: PropTypes.string,
   comment: PropTypes.string.isRequired,

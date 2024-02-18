@@ -152,8 +152,8 @@ export const DefaultComment = ({
 };
 
 DefaultComment.propTypes = {
-  isOpen: PropTypes.boolean,
-  activeAnswer: PropTypes.boolean,
+  isOpen: PropTypes.bool,
+  activeAnswer: PropTypes.bool,
   userName: PropTypes.string.isRequired,
   date: PropTypes.string,
   comment: PropTypes.string.isRequired,

@@ -17,7 +17,7 @@ BtnRoundSquareGhost.propTypes = {
   size: PropTypes.oneOf(['medium']),
   icon: PropTypes.element,
   label: PropTypes.string,
-  alert: PropTypes.boolean,
+  alert: PropTypes.bool,
 };
 
 BtnRoundSquareGhost.defaultProps = {
