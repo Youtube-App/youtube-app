@@ -37,5 +37,6 @@ module.exports = {
     'no-extra-semi': 'error',
     'no-tabs': ['error', { allowIndentationTabs: true }],
     'prettier/prettier': 'error',
+    'react/prop-types': 'off',
   },
 };

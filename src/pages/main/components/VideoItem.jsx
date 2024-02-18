@@ -14,7 +14,7 @@ import { GoCircleSlash } from 'react-icons/go';
 import { SlMinus } from 'react-icons/sl';
 import PropTypes from 'prop-types';
 
-export const VideoItem = ({ item }) => {
+export const VideoItem = ({ videos }) => {
   const replyDropdown = [
     {
       type: 'menu',
@@ -63,7 +63,9 @@ export const VideoItem = ({ item }) => {
   return (
     <div className="main__video-container">
       <div className="main__video-thumbnail">
-        <VideoThumbnail VideoThumbnail={item.snippet.thumbnails} />
+        <VideoThumbnail
+          VideoThumbnail={videos.snippet.thumbnails.standard.url}
+        />
         <VideoDuration />
       </div>
       <div className="main__video-details">
@@ -90,7 +92,7 @@ export const VideoItem = ({ item }) => {
 };
 
 VideoThumbnail.propTypes = {
-  item: PropTypes.object,
+  videos: PropTypes.object,
   videoThumbnail: PropTypes.string,
   snippet: PropTypes.object,
   thumbnails: PropTypes.string,
@@ -98,7 +100,7 @@ VideoThumbnail.propTypes = {
 };
 
 VideoThumbnail.defaultProps = {
-  item: {
+  videos: {
     snippet: {
       thumbnails: '23',
     },
