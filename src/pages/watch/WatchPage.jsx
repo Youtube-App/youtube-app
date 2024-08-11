@@ -1,20 +1,91 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { VideoTitle } from './components/VideoTitle';
 import { VideoIntroduce } from './components/VideoIntroduce';
 import { CommentHeader } from '../../components/common/CommentHeader';
 import { DefaultComment } from 'components/comments/DefaultComment';
 import { ReplyComment } from 'components/comments/ReplyComment';
 import { VideoItem } from 'components/common/VideoItem';
+import {useParams} from "react-router-dom";
+import axios from "axios";
 
 export const WatchPage = () => {
+  const [videoInfo, setVideoInfo] = useState();
+  const [channelInfo, setChannelInfo] = useState();
+  const params = useParams();
+
+  // useEffect(() => {
+  //   const data = async () => {
+  //     const res = await axios.get(`${process.env.REACT_APP_GOOGLE_API_URL}/channels`,
+  //       {
+  //         params: {
+  //           part: 'snippet',
+  //           id: channelId,
+  //           hl: 'ko',
+  //           key: process.env.REACT_APP_GOOGLE_API_KEY
+  //         }
+  //       })
+  //   }
+  //   data();
+  // }, [channelId]);
+
+  useEffect(() => {
+    const data = async () => {
+      const res = await axios.get(`${process.env.REACT_APP_GOOGLE_API_URL}/videos`, {
+        params: {
+          part: 'snippet, contentDetails, statistics',
+          id: params.id,
+          hl: 'ko',
+          key: process.env.REACT_APP_GOOGLE_API_KEY
+        }
+      })
+      setVideoInfo(res.data.items[0]);
+    }
+    data();
+  }, [params])
+
+  useEffect(() => {
+    if (videoInfo) {
+      const data = async() => {
+        const res = await axios.get(`${process.env.REACT_APP_GOOGLE_API_URL}/channels`, {
+          params: {
+            part: 'snippet, statistics',
+            id: videoInfo?.snippet.channelId,
+            hl: 'ko',
+            key: process.env.REACT_APP_GOOGLE_API_KEY
+          }
+        })
+        setChannelInfo(res.data.items[0]);
+      }
+      data();
+    }
+  },  [videoInfo])
+
+  // useEffect(() => {
+  //   axios.get(`${process.env.REACT_APP_GOOGLE_API_URL}/videos`, {
+  //     params: {
+  //       part: 'snippet',
+  //       id: params.id,
+  //       hl: 'ko',
+  //       key: process.env.REACT_APP_GOOGLE_API_KEY
+  //     }
+  //   })
+  //     .then(function(res) {
+  //       setVideoInfo(res.data.items[0]);
+  //       console.log(params, '파람')
+  //     })
+  //     .catch(function(){
+  //       console.log('실패')
+  //     })
+  // }, [params]);
+
   return (
     <div className="watch__wrapper">
       <div className="watch__video-container">
         <div className="video__player-section">{/* 플레이어 자리 */}</div>
         <VideoTitle
-          title="개발자가 사용하는 노션 노트 공개 (프로젝트, 목표, 일정 관리)"
-          creator="드림코딩"
-          subscriber="17.2만"
+          title={videoInfo?.snippet.title}
+          creator={videoInfo?.snippet.channelTitle}
+          subscriber={channelInfo?.statistics?.subscriberCount}
           likes="7.3천"
         />
         <VideoIntroduce

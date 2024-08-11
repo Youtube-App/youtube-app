@@ -8,6 +8,28 @@ export const MainPage = () => {
   const [videoCategoryId, setVideoCategoryId] = useState([]);
   const [clickedCateId, setClickedCateId] = useState();
 
+  // GET https://www.googleapis.com/youtube/v3/videoCategories
+  useEffect(() => {
+    axios.get('https://www.googleapis.com/youtube/v3/videoCategories', {
+      params: {
+        part: 'snippet',
+        regionCode: 'KR',
+        hl: 'ko',
+        key: process.env.REACT_APP_GOOGLE_API_KEY
+      }
+    })
+      .then(function(res) {
+        setVideoCategoryId(res.data.items);
+      })
+      .catch(function(error) {
+        console.log('실패');
+      })
+  }, []);
+
+  useEffect(()=> {
+    console.log(videoCategoryId);
+  }, [videoCategoryId]);
+
   useEffect(() => {
     const data = async () => {
       const res = await axios.get(
@@ -29,32 +51,6 @@ export const MainPage = () => {
     };
     data();
   }, [clickedCateId]);
-
-  useEffect(() => {
-    const data = async () => {
-      const res = await axios.get(
-        'https://www.googleapis.com/youtube/v3/videoCategories',
-        {
-          params: {
-            part: 'snippet',
-            hl: 'ko',
-            // maxResult: 5,
-            regionCode: 'KR',
-            key: process.env.REACT_APP_GOOGLE_API_KEY,
-          },
-        },
-      );
-      console.log(res.data.items, 'cate');
-
-      return setVideoCategoryId(res.data.items);
-    };
-    data();
-    // console.log(data, 'videocate');
-  }, []);
-
-  useEffect(() => {
-    console.log(videoCategoryId, 'videoCategoryId');
-  }, [videoCategoryId]);
 
   const onClick = (id) => {
     console.log(id);

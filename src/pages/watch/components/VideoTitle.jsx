@@ -79,7 +79,7 @@ export const VideoTitle = ({ title, creator, subscriber, likes }) => {
 VideoTitle.propTypes = {
   title: PropTypes.string,
   creator: PropTypes.string,
-  subscriber: PropTypes.string,
+  subscriber: PropTypes.string || PropTypes.number,
   likes: PropTypes.string,
 };
 

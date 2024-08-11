@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d769ba3b-6780-40f2-a60a-32d61995037d" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/VideoThumbnail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/VideoThumbnail.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/main/Mainpage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main/Mainpage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/main/components/VideoItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/main/components/VideoItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/watch/WatchPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/watch/WatchPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/watch/components/VideoTitle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/watch/components/VideoTitle.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_mainPage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_mainPage.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "node.js.selected.package.tslint": "(autodetect)",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>

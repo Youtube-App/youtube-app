@@ -10,7 +10,7 @@ function CustomRouter() {
       element: <MainPage />,
     },
     {
-      path: '/watch',
+      path: '/watch/:id',
       name: '비디오 보기 페이지',
       element: <WatchPage />,
     },

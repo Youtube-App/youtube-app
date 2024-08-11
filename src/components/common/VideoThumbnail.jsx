@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import videoThumbnail from '../../images/ex-img-videoThumbnail.webp';
 
 export const VideoThumbnail = ({ VideoThumbnail }) => {
   return (

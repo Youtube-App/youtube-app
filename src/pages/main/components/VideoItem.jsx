@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { ProfileBtn } from '../../../components/buttons/ProfileBtn';
 import { VideoChannelName } from '../../../components/common/VideoChannelName';
 import { UploadTime } from '../../../components/common/UploadTime';
@@ -13,6 +13,7 @@ import { IoArrowUndoOutline, IoFlagOutline } from 'react-icons/io5';
 import { GoCircleSlash } from 'react-icons/go';
 import { SlMinus } from 'react-icons/sl';
 import PropTypes from 'prop-types';
+import {Link} from "react-router-dom";
 
 export const VideoItem = ({ videos }) => {
   const replyDropdown = [
@@ -60,14 +61,19 @@ export const VideoItem = ({ videos }) => {
       label: '신고',
     },
   ];
+  useEffect(() => {
+    console.log(videos, '메인페이지');
+  }, []);
   return (
     <div className="main__video-container">
-      <div className="main__video-thumbnail">
+      <Link className="main__video-thumbnail" to={`/watch/${videos.id}`}>
         <VideoThumbnail
           VideoThumbnail={videos.snippet.thumbnails.standard.url}
+          VideoLink={videos.id}
+          channelId={videos.snippet.channelId}
         />
         <VideoDuration />
-      </div>
+      </Link>
       <div className="main__video-details">
         <ProfileBtn
           size={'medium'}
