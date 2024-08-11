@@ -1,27 +1,38 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 // import { SwiperComponent } from 'components/common/SwiperComponent';
 
-export const TabBtnPrimary = ({ label }) => {
-  const [isSelected, setIsSelected] = useState(0);
+export const TabBtnPrimary = ({ label, onClick }) => {
+  // const [isSelected, setIsSelected] = useState(0);
 
-  const onClick = (idx) => {
-    setIsSelected(idx);
-  };
+  // const onClick = (idx) => {
+  //   setIsSelected(idx);
+  // };
+
+  useEffect(() => {
+    console.log(label, 'labellabellabellabellabel');
+  }, [label]);
 
   return (
     <div className="tab__btn-primary-wrap">
-      {label.map((item, index) => {
+      <button
+        className={cn('tab__btn-primary', {
+          // 'tab__btn-primary--active': index === isSelected,
+        })}
+      >
+        전체
+      </button>
+      {label?.map((item, index) => {
         return (
           <button
             key={index}
-            onClick={() => onClick(index)}
+            onClick={() => onClick(item.id)}
             className={cn('tab__btn-primary', {
-              'tab__btn-primary--active': index === isSelected,
+              // 'tab__btn-primary--active': index === isSelected,
             })}
           >
-            {item}
+            {item.snippet.title}
           </button>
         );
       })}
